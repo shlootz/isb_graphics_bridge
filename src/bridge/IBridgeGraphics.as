@@ -43,6 +43,16 @@ package bridge
 	 * 
 	 * <p>The bridge makes all the necessary instantiations and dispatches a native signal when the system
 	 * is up and running - e.g. for StarlingEngine: Signals :: trying to dispatch GEstarlingReady</p>
+	 * <p>Example:</p>
+	 * <p>private var _bridgeGraphics:IBridgeGraphics = new BridgeGraphics(
+	 *																	StarlingEngine,
+	 *																	starling.utils.AssetManager,
+	 *																	signals.SignalsHub,
+	 *																	abstract.AbstractPool,
+	 *																	starling.animation.Juggler,
+	 *																	nape.space.Space
+	 *																	);</p>
+	  */
 	 */
 	public interface IBridgeGraphics
 	{
