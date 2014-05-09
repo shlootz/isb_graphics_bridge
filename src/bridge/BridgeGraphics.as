@@ -8,11 +8,13 @@ package bridge
 	import bridge.abstract.IAbstractState;
 	import bridge.abstract.IAbstractTexture;
 	import bridge.abstract.IAbstractTextField;
+	import bridge.abstract.IAbstractVideo;
 	import bridge.abstract.transitions.IAbstractLayerTransitionIn;
 	import bridge.abstract.transitions.IAbstractLayerTransitionOut;
 	import bridge.abstract.transitions.IAbstractStateTransition;
 	import bridge.abstract.ui.IAbstractButton;
 	import bridge.abstract.IAbstractTextField;
+	import bridge.abstract.ui.IAbstractLabel;
 	import flash.media.Sound;
 	import flash.utils.ByteArray;
 	import flash.utils.Dictionary;
@@ -47,7 +49,7 @@ package bridge
 	 * <p>The bridge makes all the necessary instantiations and dispatches a native signal when the system
 	 * is up and running - e.g. for StarlingEngine: Signals :: trying to dispatch GEstarlingReady</p>
 	 * 
-	 * <p>Example:</p>
+	 * <p><b>Examples</b></p>
 	 * <p>private var _bridgeGraphics:IBridgeGraphics = new BridgeGraphics(
 	 *																	StarlingEngine,
 	 *																	starling.utils.AssetManager,
@@ -56,6 +58,30 @@ package bridge
 	 *																	starling.animation.Juggler,
 	 *																	nape.space.Space
 	 *																	);</p>
+	 * <p><b>Creating a new button</b></p>
+	 * <p>var button:IAbstractButton = _bridgeGraphics.requestButton();</p>
+	 * 
+	 * <p><b>Creating a new textField</b></p>
+	 * <p>var t:IAbstractTextField = _bridgeGraphics.requestTextField(150, 30, "Yaaaay", "Times", 30);</p>
+	 * 
+	 * <p><b>Creating a new Sprite</b></p>
+	 * <p>var sprite:IAbstractSprite = _bridgeGraphics.requestSprite();</p>
+	 * 
+	 * <p><b>Creating a new Image</b></p>
+	 * <p>var img:IAbstractImage = _bridgeGraphics.requestImage("Background");</p>
+	 * 
+	 * <p><b>Creating a new Movie Clip</b></p>
+	 * <p>var mc:IAbstractMovie = _bridgeGraphics.requestMovie("Bet", 30);</p>
+	 * 
+	 * <p><b>Request a stored XML</b></p>
+	 * <p>_bridgeGraphics.requestXML("layerLayout");</p>
+	 * 
+	 * <p><b>Request a new Layer</b></p>
+	 * <p>var layersVO:IAbstractEngineLayerVO = _bridgeGraphics.requestLayersVO();</p>
+	 * 
+	 * E:\flex_sdk\bin>asdoc  -doc-sources "C:\Users\user 51\Documents\GitHub\isb_graph
+	 * ics_bridge\src" -doc-sources "C:\Users\user 51\Documents\GitHub\isb_graphics_bri
+	 * dge\lib" -main-title "ISBGraphicsBridge" -output "C:\Users\user 51\Desktop\test"
 	  */
 	public class BridgeGraphics implements IBridgeGraphics
 	{
@@ -273,6 +299,61 @@ package bridge
 			return (_graphicsEngine as IEngine).requestMovie(prefix, fps) as IAbstractMovie;
 		}
 		
+		/**
+		 * 
+		 * @return IAbstractLayerTransitionIn
+		 * @see bridge.abstract.transitions.IAbstractLayerTransitionIn
+		 */
+		public function requestLayerTransitionIN():IAbstractLayerTransitionIn
+		{
+			var inTransition:IAbstractLayerTransitionIn = (_graphicsEngine as IEngine).requestLayerTransitionIN();
+			return inTransition;
+		}
+		
+		/**
+		 * 
+		 * @return IAbstractVideo
+		 * @see bridge.abstract.IAbstractVideo
+		 */
+		public function requestVideo():IAbstractVideo
+		{
+			var video:IAbstractVideo = (_graphicsEngine as IEngine).requestVideo();
+			return video
+		}
+		
+		/**
+		 * 
+		 * @param	textureClass
+		 * @param	xml
+		 */
+		public function registerBitmapFont(textureClass:Class, xml:XML):void
+		{
+			(_graphicsEngine as IEngine).registerBitmapFont(textureClass, xml);
+		}
+		
+		/**
+		 * 
+		 * @param	text
+		 * @return IAbstractLabel
+		 * @see bridge.abstract.ui.IAbstractLabel
+		 */
+		public function requestLabelFromTextfield(text:IAbstractTextField):IAbstractLabel
+		{
+			var label:IAbstractLabel = (_graphicsEngine as IEngine).requestLabelFromTextfield(text);
+			return label;
+		}
+		
+		/**
+		 * 
+		 * @return IAbstractLayerTransitionOut
+		 * @see bridge.abstract.transitions.IAbstractLayerTransitionOut
+		 */
+		public function requestLayerTransitionOUT():IAbstractLayerTransitionOut
+		{
+			var outTransition:IAbstractLayerTransitionOut = (_graphicsEngine as IEngine).requestLayerTransitionOUT();
+			return outTransition;
+		}
+		
 		/** Build an empty sprite
 		 * 
 		 * @return Returns an IAbstractSprite
@@ -329,6 +410,19 @@ package bridge
 		public function requestXML(name:String):XML
 		{
 			return _assetsManager.getXml(name);
+		}
+		
+		/**
+		 * 
+		 * @param	name
+		 * @param	depth
+		 * @param	layout
+		 * @param	addedToStage
+		 * @return IAbstractLayer
+		 */
+		public function requestLayer(name:String, depth:Number, layout:XML, addedToStage:Boolean):IAbstractLayer
+		{
+			return (_graphicsEngine as IEngine).requestLayer(name, depth, layout, addedToStage);
 		}
 		
 		/**

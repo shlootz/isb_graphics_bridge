@@ -11,6 +11,7 @@ package bridge
 	import bridge.abstract.IAbstractTextField;
 	import bridge.abstract.transitions.IAbstractLayerTransitionIn;
 	import bridge.abstract.transitions.IAbstractLayerTransitionOut;
+	import bridge.abstract.IAbstractVideo;
 	import bridge.abstract.ui.IAbstractButton;
 	import bridge.abstract.IAbstractTexture;
 	import flash.utils.ByteArray;
@@ -43,7 +44,8 @@ package bridge
 	 * 
 	 * <p>The bridge makes all the necessary instantiations and dispatches a native signal when the system
 	 * is up and running - e.g. for StarlingEngine: Signals :: trying to dispatch GEstarlingReady</p>
-	 * <p>Example:</p>
+	 * 
+	 * <p><b>Examples</b></p>
 	 * <p>private var _bridgeGraphics:IBridgeGraphics = new BridgeGraphics(
 	 *																	StarlingEngine,
 	 *																	starling.utils.AssetManager,
@@ -52,7 +54,26 @@ package bridge
 	 *																	starling.animation.Juggler,
 	 *																	nape.space.Space
 	 *																	);</p>
-	  */
+	 * <p><b>Creating a new button</b></p>
+	 * <p>var button:IAbstractButton = _bridgeGraphics.requestButton();</p>
+	 * 
+	 * <p><b>Creating a new textField</b></p>
+	 * <p>var t:IAbstractTextField = _bridgeGraphics.requestTextField(150, 30, "Yaaaay", "Times", 30);</p>
+	 * 
+	 * <p><b>Creating a new Sprite</b></p>
+	 * <p>var sprite:IAbstractSprite = _bridgeGraphics.requestSprite();</p>
+	 * 
+	 * <p><b>Creating a new Image</b></p>
+	 * <p>var img:IAbstractImage = _bridgeGraphics.requestImage("Background");</p>
+	 * 
+	 * <p><b>Creating a new Movie Clip</b></p>
+	 * <p>var mc:IAbstractMovie = _bridgeGraphics.requestMovie("Bet", 30);</p>
+	 * 
+	 * <p><b>Request a stored XML</b></p>
+	 * <p>_bridgeGraphics.requestXML("layerLayout");</p>
+	 * 
+	 * <p><b>Request a new Layer</b></p>
+	 * <p>var layersVO:IAbstractEngineLayerVO = _bridgeGraphics.requestLayersVO();</p>
 	 */
 	public interface IBridgeGraphics
 	{
@@ -153,6 +174,41 @@ package bridge
 		 * @see bridge.abstract.IAbstractMovie
 		 */
 		function requestMovie(prefix:String, fps:uint = 24):IAbstractMovie
+		
+		/**
+		 * 
+		 * @return
+		 */
+		function requestLayerTransitionIN():IAbstractLayerTransitionIn
+		
+		/**
+		 * 
+		 * @return
+		 */
+		function requestLayerTransitionOUT():IAbstractLayerTransitionOut
+		
+		/**
+		 * 
+		 * @param	name
+		 * @param	depth
+		 * @param	layout
+		 * @param	addedToStage
+		 * @return IAbstractLayer
+		 */
+		function requestLayer(name:String, depth:Number, layout:XML, addedToStage:Boolean):IAbstractLayer
+		
+		/**
+		 * 
+		 * @return
+		 */
+		function requestVideo():IAbstractVideo
+		
+		/**
+		 * 
+		 * @param	textureClass
+		 * @param	xml
+		 */
+		function registerBitmapFont(textureClass:Class, xml:XML):void
 		
 		/** Build an empty sprite
 		 * 

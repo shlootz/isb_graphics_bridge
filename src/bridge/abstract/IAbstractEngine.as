@@ -6,6 +6,7 @@ package bridge.abstract
 	import bridge.abstract.transitions.IAbstractLayerTransitionOut;
 	import bridge.abstract.transitions.IAbstractStateTransition;
 	import bridge.abstract.ui.IAbstractButton;
+	import bridge.abstract.ui.IAbstractLabel;
 	import flash.utils.Dictionary
 	/**
 	 * ...
@@ -53,12 +54,54 @@ package bridge.abstract
 		 */
 		function requestButton():IAbstractButton
 		
+		/**
+		 * 
+		 * @param	text
+		 * @return IAbstractLabel
+		 */
+		function requestLabelFromTextfield(text:IAbstractTextField):IAbstractLabel
+		
+		/**
+		 * 
+		 * @param	textureClass
+		 * @param	xml
+		 */
+		function registerBitmapFont(textureClass:Class, xml:XML):void
+		
+		/**
+		 * 
+		 * @return IAbstractVideo
+		 */ 
+		function requestVideo():IAbstractVideo
+		
+		/**
+		 * 
+		 * @return IAbstractLayerTransitionIn
+		 */
+		function requestLayerTransitionIN():IAbstractLayerTransitionIn
+		
+		/**
+		 * 
+		 * @return IAbstractLayerTransitionOut
+		 */
+		function requestLayerTransitionOUT():IAbstractLayerTransitionOut
 		
 		/**
 		 * 
 		 * @return @see bridge.abstract.IAbstractState
 		 */
 		function requestState():IAbstractState
+		
+		/**
+		 * 
+		 * @param	name
+		 * @param	depth
+		 * @param	layout
+		 * @param	addedToStage
+		 * @return IAbstractLayer
+		 * @see bridge.abstract.IAbstractLayer
+		 */
+		function requestLayer (name:String, depth:Number, layout:XML, addedToStage:Boolean) : IAbstractLayer;
 		
 		/**
 		 * 
