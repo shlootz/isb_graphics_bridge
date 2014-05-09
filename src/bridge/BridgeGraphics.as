@@ -15,6 +15,7 @@ package bridge
 	import bridge.abstract.ui.IAbstractButton;
 	import bridge.abstract.IAbstractTextField;
 	import bridge.abstract.ui.IAbstractLabel;
+	import flash.geom.Point;
 	import flash.media.Sound;
 	import flash.utils.ByteArray;
 	import flash.utils.Dictionary;
@@ -123,6 +124,7 @@ package bridge
 		 * 									or you don't need physics in your project</li>
 		 */
 		public function BridgeGraphics( 
+										canvasSize:Point,
 										graphicsEngineClass:Class,
 										assetsManagerClass:Class, 
 										signalsManagerClass:Class, 
@@ -138,7 +140,7 @@ package bridge
 			_injectedClasses[JUGGLER] = juggler;
 			_injectedClasses[SPACE] = space;
 			
-			_graphicsEngine = new graphicsEngineClass(graphicsEngineInited) as IEngine;
+			_graphicsEngine = new graphicsEngineClass(graphicsEngineInited, canvasSize.x, canvasSize.y) as IEngine;
 			_assetsManager = new assetsManagerClass();
 			_signalsManager = new signalsManagerClass();
 			(_graphicsEngine as IEngine).injectAssetsManager(_assetsManager);
