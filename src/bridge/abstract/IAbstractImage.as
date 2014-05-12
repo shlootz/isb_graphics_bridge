@@ -19,7 +19,20 @@ package bridge.abstract
 	 */
 	public interface IAbstractImage extends IAbstractDisplayObject
 	{
-		
+		/**
+		 * @return Object
+		 */
+		 function get currentTexture () : Object
+		 
+		 /**
+		  * @param Object
+		  */
+		 function set newTexture (value:Object) : void
+		 
+		 /**
+		  * 
+		  */
+		 function readjustSize () :void
 	}
 	
 }

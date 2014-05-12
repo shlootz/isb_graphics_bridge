@@ -54,6 +54,15 @@ package bridge
 	 *																	starling.animation.Juggler,
 	 *																	nape.space.Space
 	 *																	);</p>
+	 * 
+	 * <p><b>Adding it to stage - this will trigger the Stage3D to init and dispatch the ready signal</b></p>
+	 * 	addChild(_bridgeGraphics.engine as DisplayObject);
+	 *  (_bridgeGraphics.signalsManager as ISignalsHub).addListenerToSignal(Signals.STARLING_READY, initEngine);	
+	 * private function initEngine(signal:String, obj:Object):void
+	 *	{
+	 * 		...
+	 *  }
+	 * 
 	 * <p><b>Creating a new button</b></p>
 	 * <p>var button:IAbstractButton = _bridgeGraphics.requestButton();</p>
 	 * 
