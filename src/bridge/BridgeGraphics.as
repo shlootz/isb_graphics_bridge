@@ -20,7 +20,6 @@ package bridge
 	import flash.utils.ByteArray;
 	import flash.utils.Dictionary;
 	import flash.utils.getQualifiedClassName;
-	import signals.Signals;
 	/**
 	 * ...
 	 * @author Alex Popescu
