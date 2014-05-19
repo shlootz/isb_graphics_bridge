@@ -138,7 +138,14 @@ package bridge.abstract
 		 * @see bridge.abstract.IAbstractLayerTransitionIn 
 		 * @see bridge.abstract.IAbstractLayerTransitionOut 
 		 */
-		function updateLayers(inLayers:Vector.<IAbstractLayer> = null, outLayers:Vector.<IAbstractLayer> = null, inTransition:IAbstractLayerTransitionIn = null, outTransition:IAbstractLayerTransitionOut= null):void
+		function updateLayers(inLayers:Vector.<IAbstractLayer> = null, outLayers:Vector.<IAbstractLayer> = null, inTransition:IAbstractLayerTransitionIn = null, outTransition:IAbstractLayerTransitionOut = null):void
+		
+		/**
+		 * 
+		 * @param	atlasXml
+		 * @param	atlasPng
+		 */
+		function addTextureAtlas(name:String, atlasXml:XML, atlasPng:Class):void
 		
 	}
 	

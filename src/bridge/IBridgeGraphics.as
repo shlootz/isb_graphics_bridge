@@ -343,6 +343,13 @@ package bridge
 		
 		/**
 		 * 
+		 * @param	atlasXml
+		 * @param	atlasPng
+		 */
+		function storeAtlas(name:String, atlasXml:XML, atlasPng:Class):void
+		
+		/**
+		 * 
 		 */
 		function cleanUp():void
 	}

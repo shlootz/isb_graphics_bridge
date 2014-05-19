@@ -554,6 +554,16 @@ package bridge
 			_assetsManager.addXml(name, xml)
 		}
 		
+		/**
+		 * 
+		 * @param	atlasXml
+		 * @param	atlasPng
+		 */
+		public function storeAtlas(name:String, atlasXml:XML, atlasPng:Class):void
+		{
+			_graphicsEngine.addTextureAtlas(name, atlasXml, atlasPng);
+		}
+		
 		/** Pretty much destroys everything
 		 * @todo check the above
 		 */
