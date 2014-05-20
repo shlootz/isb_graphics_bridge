@@ -21,13 +21,13 @@ package bridge.abstract
 		 * @param	type
 		 * @param	size
 		 */
-		public function AbstractPool(id:String,type:Class,size:uint) 
+		public function AbstractPool(id:String,type:Class,size:uint, ... args) 
 		{
 			_id = id;
 			_type = type;
 			_size = size;
 			
-			ObjPool(size, type);
+			ObjPool(size, type, args);
 		}
 		
 		/**
@@ -35,7 +35,7 @@ package bridge.abstract
 		 * @param	poolsize
 		 * @param	_type
 		 */
-	    public function ObjPool(poolsize:uint, _type:Class):void
+	    public function ObjPool(poolsize:uint, _type:Class, args:Array):void
 		{
 			var className:String = getQualifiedClassName(_type);
 			var vectorClass:Class  = Class(getDefinitionByName("Vector.<" + className + ">"));
@@ -43,8 +43,24 @@ package bridge.abstract
 			//_pool = new vectorClass(poolsize); //if non SWC version
 			_pool = new Array(poolsize);
 			
-			 while( --i > -1 ) 
-                _pool[i] = new _type(); 
+			 while ( --i > -1 ) 
+			 {
+				 switch (args.length)
+				 {
+					 case 0:
+						 _pool[i] = new _type(); 
+						 break;
+					 case 1:
+						 _pool[i] = new _type(args[0]); 
+						 break;
+					 case 2:
+						 _pool[i] = new _type(args[0], args[1]); 
+						 break;
+					 case 3:
+						  _pool[i] = new _type(args[0], args[1], args[2]); 
+						 break;
+				 }
+			 }	
 		}
 		
 		/**
