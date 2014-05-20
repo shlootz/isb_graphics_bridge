@@ -565,7 +565,7 @@ package bridge
 		}
 		
 		/** Pretty much destroys everything
-		 * @todo check the above
+		 * @todo double check the above
 		 */
 		public function cleanUp():void
 		{
