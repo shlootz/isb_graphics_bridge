@@ -136,7 +136,8 @@ package bridge
 										signalsManagerClass:Class, 
 										poolClass:Class,
 										juggler:Class = null,
-										space:Class = null
+										space:Class = null,
+										debugMode:Boolean = false
 									    ) 
 		{
 			_injectedClasses[GRAPHICS_ENGINE] = graphicsEngineClass;
@@ -146,7 +147,7 @@ package bridge
 			_injectedClasses[JUGGLER] = juggler;
 			_injectedClasses[SPACE] = space;
 			
-			_graphicsEngine = new graphicsEngineClass(graphicsEngineInited, canvasSize.x, canvasSize.y) as IEngine;
+			_graphicsEngine = new graphicsEngineClass(graphicsEngineInited, canvasSize.x, canvasSize.y, "FULLSCREEN", debugMode) as IEngine;
 			_assetsManager = new assetsManagerClass();
 			_signalsManager = new signalsManagerClass();
 			(_graphicsEngine as IEngine).injectAssetsManager(_assetsManager);
