@@ -159,16 +159,16 @@ package bridge
 		 */
 		function set space(val:Object):void
 		
-		/** Retrieves a new texture from stored Atlas
-		 * 
+		/** 
+		 * Retrieves a new texture from stored Atlas
 		 * @param	name
 		 * @return IAbstractTexture
 		 * @see bridge.abstract.IAbstractTexture
 		 */
 		function requestTexture(name:String):IAbstractTexture
 		
-		/** Request an image
-		 * 
+		/** 
+		 * Creates a new  image
 		 * @param	name
 		 * @return Returns an IAbstractImage
 		 * @see bridge.abstract.IAbstractImage
@@ -185,19 +185,19 @@ package bridge
 		function requestMovie(prefix:String, fps:uint = 24):IAbstractMovie
 		
 		/**
-		 * 
+		 * Creates a new transition animation
 		 * @return
 		 */
 		function requestLayerTransitionIN():IAbstractLayerTransitionIn
 		
 		/**
-		 * 
+		 * Creates a new transition animation
 		 * @return
 		 */
 		function requestLayerTransitionOUT():IAbstractLayerTransitionOut
 		
 		/**
-		 * 
+		 * Creates a new layer.
 		 * @param	name
 		 * @param	depth
 		 * @param	layout
@@ -207,13 +207,13 @@ package bridge
 		function requestLayer(name:String, depth:Number, layout:XML, addedToStage:Boolean):IAbstractLayer
 		
 		/**
-		 * 
+		 * Creates a new video.
 		 * @return
 		 */
 		function requestVideo():IAbstractVideo
 		
 		/**
-		 * 
+		 * Registers the bitmap font for further use. The font will be accessible via its name.
 		 * @param	textureClass
 		 * @param	xml
 		 */
@@ -255,21 +255,21 @@ package bridge
 		function requestTextField(width:int, height:int, text:String, fontName:String="Verdana", fontSize:Number=12, color:uint=0, bold:Boolean=false):IAbstractTextField
 		
 		/**
-		 * 
+		 * Makes a request to build a new IAbstractEngineLayerVO
 		 * @return IAbstractEngineLayerVO
 		 * @see bridge.abstract.IAbstractEngineLayerVO
 		 */
 		function requestLayersVO():IAbstractEngineLayerVO
 		
 		/**
-		 * 
+		 * Returns a store XML from the Assets Manager
 		 * @param	name
 		 * @return XML
 		 */
-		function requestXML(name:String):XML
+		function getXMLFromAssetsManager(name:String):XML
 		
-		/** Makes the transition to a new state
-		 * 
+		/** 
+		 * Makes the transition to a new state
 		 * @param	newState 
 		 * @see bridge.abstract.IAbstractState
 		 * @param	transitionEffect 
@@ -285,16 +285,16 @@ package bridge
 		 */
 		function initLayers(inputLayers:Dictionary, inTransition:IAbstractLayerTransitionIn = null, outTransition:IAbstractLayerTransitionOut = null):void
 		
-		/** Receives 2 vectors of IAbstractLayer and updates the layers in the current state
-		 * 
+		/** 
+		 * Receives 2 vectors of IAbstractLayer and updates the layers in the current state
 		 * @param	inLayers
 		 * @param	outLayers
 		 * @see  bridge.abstract.IAbstractLayer and updates the layers in the current state
 		 */
 		function updateLayers(inLayers:Vector.<IAbstractLayer> = null, outLayers:Vector.<IAbstractLayer> = null, inTransition:IAbstractLayerTransitionIn = null, outTransition:IAbstractLayerTransitionOut = null ):void
 		
-		/** Swaps layer1 with layer2
-		 * 
+		/** 
+		 * Swaps layer1 with layer2
 		 * @param	layer1 
 		 * @see  bridge.abstract.IAbstractLayer
 		 * @param	layer2 
@@ -307,42 +307,43 @@ package bridge
 		 */
 		function get layers():Dictionary
 		
-		/** Adds child to the default Stage
-		 * 
+		/** 
+		 * Adds child to the default Stage. Please note that this will put the child on the top index.
+		 * It is preferable to add new children to states or layers.
 		 * @param	child
 		 */
 		function addChild(child:Object):void
 		
 		/**
-		 * 
+		 * Saves a byte array in Assets Manager
 		 * @param	name
 		 * @param	byteArray
 		 */
 		function storeByteArray(name:String, byteArray:ByteArray):void
 		
 		/**
-		 * 
+		 * Saves an object in Assets Manager
 		 * @param	name
 		 * @param	object
 		 */
 		function storeObject(name:String, object:Object):void
 		
 		/**
-		 * 
+		 * Saves a new sound in Assets Manager
 		 * @param	name
 		 * @param	sound
 		 */
 		function storeSound(name:String, sound:Sound):void
 		
 		/**
-		 * 
+		 * Saves a new texture in Assets Manager
 		 * @param	name
 		 * @param	texture
 		 */
 		function storeTexture(name:String, texture:IAbstractTexture):void
 		
 		/**
-		 * 
+		 * Saves a new atlas in the Assets Manager
 		 * @param	atlasXml
 		 * @param	atlasPng
 		 */

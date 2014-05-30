@@ -372,8 +372,8 @@ package bridge
 			return (_graphicsEngine as IEngine).requestSprite() as IAbstractSprite;
 		}
 		
-		/** Builds an empty button
-		 * 
+		/** 
+		 * Builds an empty button
 		 * @return Returns IAbstractButton
 		 * @see bridge.abstract.IAbstractButton
 		 */
@@ -415,7 +415,7 @@ package bridge
 		 * @param name
 		 * @return XML
 		 */
-		public function requestXML(name:String):XML
+		public function getXMLFromAssetsManager(name:String):XML
 		{
 			return _assetsManager.getXml(name);
 		}
@@ -443,8 +443,8 @@ package bridge
 			return (_graphicsEngine as IEngine).requestLayersVO();
 		}
 		
-		/** Makes the transition to a new state
-		 * 
+		/** 
+		 * Makes the transition to a new state
 		 * @param	newState 
 		 * @see bridge.abstract.IAbstractState
 		 * @param	transitionEffect
@@ -455,8 +455,8 @@ package bridge
 			(_graphicsEngine as IEngine).tranzitionToState(newState, transitionEffect);
 		}
 		
-		/** Adds child to the default Stage
-		 * 
+		/** 
+		 * Adds child to the default Stage.
 		 * @param	child
 		 */
 		public function addChild(child:Object):void
