@@ -1,8 +1,10 @@
 package bridge 
 {
+	import bridge.abstract.IAbstractDisplayObject;
 	import bridge.abstract.IAbstractEngineLayerVO;
 	import bridge.abstract.IAbstractImage;
 	import bridge.abstract.IAbstractLayer;
+	import bridge.abstract.IAbstractMask;
 	import bridge.abstract.IAbstractMovie;
 	import bridge.abstract.IAbstractSprite;
 	import bridge.abstract.IAbstractState;
@@ -408,6 +410,20 @@ package bridge
 		{
 			var t:IAbstractTextField = (_graphicsEngine as IEngine).requestTextField(width, height, text, fontName, fontSize, color);
 			return t;
+		}
+		
+		/**
+		 * 
+		 * @param	maskedObject
+		 * @param	mask
+		 * @param	isAnimated
+		 * @return IAbstractMask
+		 * @see bridge.abstract.IAbstractMask
+		 */
+		public function requestMask(maskedObject:IAbstractDisplayObject, mask:IAbstractDisplayObject, isAnimated:Boolean = false):IAbstractMask
+		{
+			var mM:IAbstractMask = (_graphicsEngine as IEngine).requestMask(maskedObject, mask, isAnimated);
+			return mM;
 		}
 		
 		/**

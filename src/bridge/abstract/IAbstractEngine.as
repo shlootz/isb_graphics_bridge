@@ -72,6 +72,16 @@ package bridge.abstract
 		
 		/**
 		 * 
+		 * @param	maskedObject
+		 * @param	mask
+		 * @param	isAnimated
+		 * @return IAbstractMask
+		 * @see bridge.abstract.IAbstractMask
+		 */
+		function requestMask(maskedObject:IAbstractDisplayObject, mask:IAbstractDisplayObject, isAnimated:Boolean = false):IAbstractMask
+		
+		/**
+		 * 
 		 * @return IAbstractEngineLayerVO
 		 * @see bridge.abstract.IAbstractEngineLayerVO
 		 */

@@ -8,12 +8,14 @@ package bridge
 	import bridge.abstract.IAbstractImage;
 	import bridge.abstract.IAbstractSprite;
 	import bridge.abstract.IAbstractState;
+	import bridge.abstract.IAbstractDisplayObject;
 	import bridge.abstract.IAbstractTextField;
 	import bridge.abstract.transitions.IAbstractLayerTransitionIn;
 	import bridge.abstract.transitions.IAbstractLayerTransitionOut;
 	import bridge.abstract.IAbstractVideo;
 	import bridge.abstract.ui.IAbstractButton;
 	import bridge.abstract.IAbstractTexture;
+	import bridge.abstract.IAbstractMask;
 	import flash.utils.ByteArray;
 	import flash.media.Sound;
 	
@@ -83,6 +85,14 @@ package bridge
 	 * 
 	 * <p><b>Request a new Layer</b></p>
 	 * <p>var layersVO:IAbstractEngineLayerVO = _bridgeGraphics.requestLayersVO();</p>
+	 * <p>var newLayer:IAbstractLayer = _bridgeGraphics.requestLayer("Tzeapa", 0, x, true);</p>
+	 * <p>inLayers.push(newLayer);</p>
+	*	<p>_bridgeGraphics.updateLayers(inLayers, null, null, null);</p>
+	* 
+	* <p><b>Requesting a new mask</b></p>
+	* <p>var m:IAbstractMask = _bridgeGraphics.requestMask(_bridgeGraphics.requestImage("Background"), _bridgeGraphics.requestImage("Auto-Spin-Button-Down"));</p>
+	* <p>m.name = "masca";</p>
+	* <p>_bridgeGraphics.addChild(m);</p>
 	 */
 	public interface IBridgeGraphics
 	{
@@ -232,6 +242,15 @@ package bridge
 		 * @see bridge.abstract.IAbstractButton
 		 */
 		function requestButton(name:String = ""):IAbstractButton
+		
+		/**
+		 * Builds a new container that contains both the masked object and the mask itself.
+		 * @param	maskedObject
+		 * @param	mask
+		 * @param	isAnimated
+		 * @return
+		 */
+		function requestMask(maskedObject:IAbstractDisplayObject, mask:IAbstractDisplayObject, isAnimated:Boolean = false):IAbstractMask
 		
 		/** Builds an empty state
 		 * 
