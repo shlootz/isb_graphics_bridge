@@ -17,6 +17,7 @@ package bridge
 	import bridge.abstract.ui.IAbstractButton;
 	import bridge.abstract.IAbstractTextField;
 	import bridge.abstract.ui.IAbstractLabel;
+	import flash.display.BitmapData;
 	import flash.geom.Point;
 	import flash.media.Sound;
 	import flash.utils.ByteArray;
@@ -295,6 +296,16 @@ package bridge
 		public function requestImage(name:String):IAbstractImage
 		{
 			return (_graphicsEngine as IEngine).requestImage(_assetsManager.getTexture(name), name) as IAbstractImage;
+		}
+		
+		/**
+		 * 
+		 * @param	bitmapData
+		 * @return
+		 */
+		public function requestImageFromBitmapData(bitmapData:BitmapData):IAbstractImage
+		{
+			return(_graphicsEngine as IEngine).requestImageFromBitmapData(bitmapData) as IAbstractImage;
 		}
 		
 		/** Uses a prefix to build an animation from images in an atlas.

@@ -8,6 +8,8 @@ package bridge.abstract
 	import bridge.abstract.ui.IAbstractButton;
 	import bridge.abstract.ui.IAbstractLabel;
 	import flash.utils.Dictionary
+	import flash.display.BitmapData;
+	
 	/**
 	 * ...
 	 * @author Alex Popescu
@@ -47,6 +49,14 @@ package bridge.abstract
 		 * @see bridge.abstract.IAbstractImage
 		 */
 		function requestImage(texture:Object, name:String = ""):IAbstractImage
+		
+		/**
+		 * 
+		 * @param	bitmapData
+		 * @return
+		 */
+		function requestImageFromBitmapData(bitmapData:BitmapData):IAbstractImage
+		
 		/**
 		 * 
 		 * @param	prefix

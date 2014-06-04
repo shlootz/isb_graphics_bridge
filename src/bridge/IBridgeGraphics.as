@@ -18,6 +18,7 @@ package bridge
 	import bridge.abstract.IAbstractMask;
 	import flash.utils.ByteArray;
 	import flash.media.Sound;
+	import flash.display.BitmapData;
 	
 	/**
 	 * ...
@@ -184,6 +185,13 @@ package bridge
 		 * @see bridge.abstract.IAbstractImage
 		 */
 		function requestImage(name:String):IAbstractImage
+		
+		/**
+		 * 
+		 * @param	bitmapData
+		 * @return
+		 */
+		function requestImageFromBitmapData(bitmapData:BitmapData):IAbstractImage
 		
 		/** Uses a prefix to build an animation from images in an atlas.
 		 * 
