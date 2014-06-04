@@ -46,7 +46,7 @@ package bridge.abstract
 		 * @return IAbstractImage
 		 * @see bridge.abstract.IAbstractImage
 		 */
-		function requestImage(texture:Object):IAbstractImage
+		function requestImage(texture:Object, name:String = ""):IAbstractImage
 		/**
 		 * 
 		 * @param	prefix
@@ -125,13 +125,13 @@ package bridge.abstract
 		 * 
 		 * @return @see bridge.abstract.IAbstractSprite
 		 */
-		function requestSprite():IAbstractSprite
+		function requestSprite(name:String = ""):IAbstractSprite
 		
 		/**
 		 * 
 		 * @return @see bridge.abstract.IAbstractButton
 		 */
-		function requestButton():IAbstractButton
+		function requestButton(name:String = ""):IAbstractButton
 		
 		/**
 		 * 

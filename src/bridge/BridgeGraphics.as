@@ -292,7 +292,7 @@ package bridge
 		 */
 		public function requestImage(name:String):IAbstractImage
 		{
-			return (_graphicsEngine as IEngine).requestImage(_assetsManager.getTexture(name)) as IAbstractImage;
+			return (_graphicsEngine as IEngine).requestImage(_assetsManager.getTexture(name), name) as IAbstractImage;
 		}
 		
 		/** Uses a prefix to build an animation from images in an atlas.
@@ -367,7 +367,7 @@ package bridge
 		 * @return Returns an IAbstractSprite
 		 * @see bridge.abstract.IAbstractSprite
 		 */
-		public function requestSprite():IAbstractSprite
+		public function requestSprite(name:String = ""):IAbstractSprite
 		{
 			return (_graphicsEngine as IEngine).requestSprite() as IAbstractSprite;
 		}
@@ -377,9 +377,9 @@ package bridge
 		 * @return Returns IAbstractButton
 		 * @see bridge.abstract.IAbstractButton
 		 */
-		public function requestButton():IAbstractButton
+		public function requestButton(name:String = ""):IAbstractButton
 		{
-			return(_graphicsEngine as IEngine).requestButton() as IAbstractButton;
+			return(_graphicsEngine as IEngine).requestButton(name) as IAbstractButton;
 		}
 		
 		/** Builds an empty state

@@ -224,14 +224,14 @@ package bridge
 		 * @return Returns an IAbstractSprite
 		 * @see bridge.abstract.IAbstractSprite
 		 */
-		function requestSprite():IAbstractSprite
+		function requestSprite(name:String = ""):IAbstractSprite
 		
 		/** Build an empty button
 		 * 
 		 * @return Returns an IAbstractButton
 		 * @see bridge.abstract.IAbstractButton
 		 */
-		function requestButton():IAbstractButton
+		function requestButton(name:String = ""):IAbstractButton
 		
 		/** Builds an empty state
 		 * 
