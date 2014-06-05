@@ -52,6 +52,18 @@ package bridge.abstract
 		
 		/**
 		 * 
+		 * @param	scrollImage
+		 * @param	width
+		 * @param	height
+		 * @param	centerX
+		 * @param	centerY
+		 * @param	useBaseTexture
+		 * @return
+		 */
+		function requestBlitMask(scrollImage:IAbstractImage, width:Number, height:Number, centerX:Number, centerY:Number, useBaseTexture:Boolean  = false):IAbstractBlitMask
+		
+		/**
+		 * 
 		 * @param	bitmapData
 		 * @return
 		 */

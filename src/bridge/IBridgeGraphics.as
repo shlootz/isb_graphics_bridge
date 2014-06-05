@@ -16,6 +16,7 @@ package bridge
 	import bridge.abstract.ui.IAbstractButton;
 	import bridge.abstract.IAbstractTexture;
 	import bridge.abstract.IAbstractMask;
+	import bridge.abstract.IAbstractBlitMask;
 	import flash.utils.ByteArray;
 	import flash.media.Sound;
 	import flash.display.BitmapData;
@@ -78,6 +79,15 @@ package bridge
 	 * <p><b>Creating a new Image</b></p>
 	 * <p>var img:IAbstractImage = _bridgeGraphics.requestImage("Background");</p>
 	 * 
+	 * <p><b>Creating a new Image using custom bitmap data</b></p>
+	 * <p>var s2:flash.display.Shape = new flash.display.Shape();</p>
+	 * <p>s2.graphics.beginFill(0xff0000, 1);</p>
+	 *	<p>s2.graphics.drawCircle(40, 40, 40);</p>
+	 *	<p>s2.graphics.endFill();</p>
+	 *	<p>var bmpData:BitmapData = new BitmapData(100,100, true, 0x000000);</p>
+	 *	<p>bmpData.draw(s2);</p>
+	 * <p>_bridgeGraphics.addChild(_bridgeGraphics.requestImageFromBitmapData(bmpData));</p>
+	 * 
 	 * <p><b>Creating a new Movie Clip</b></p>
 	 * <p>var mc:IAbstractMovie = _bridgeGraphics.requestMovie("Bet", 30);</p>
 	 * 
@@ -94,6 +104,27 @@ package bridge
 	* <p>var m:IAbstractMask = _bridgeGraphics.requestMask(_bridgeGraphics.requestImage("Background"), _bridgeGraphics.requestImage("Auto-Spin-Button-Down"));</p>
 	* <p>m.name = "masca";</p>
 	* <p>_bridgeGraphics.addChild(m);</p>
+	* 
+	* <p><b>Requesting a new BlitMask</b></p>
+	* <p>private var scroll:IAbstractBlitMask;</p>
+	*	
+	*	<p>private function testScrollingImage():void</p>
+	*	<p>{</p>
+	*		
+	*	<p>var scrollingImg:IAbstractImage = _bridgeGraphics.requestImage("Numbers");</p>
+	*		 
+	*	<p>scroll = _bridgeGraphics.requestBlitMask(scrollingImg, 600, 600, 300, 300);</p>
+	*		
+	*	<p>_bridgeGraphics.addChild(scroll);</p>
+	*		
+	*	<p>addEventListener(flash.events.Event.ENTER_FRAME, onUpdate);</p>
+	*	<p>}</p>
+	*	
+	*	<p>private function onUpdate(e:flash.events.Event):void</p>
+	*	<p>{</p>
+	*	<p>scroll.tilesOffsetY --;</p>
+	*	<p>scroll.tilesOffsetX ++;</p>
+	*	<p>}</p>
 	 */
 	public interface IBridgeGraphics
 	{
@@ -188,6 +219,18 @@ package bridge
 		
 		/**
 		 * 
+		 * @param	scrollImage
+		 * @param	width
+		 * @param	height
+		 * @param	centerX
+		 * @param	centerY
+		 * @param	useBaseTexture
+		 * @return
+		 */
+		function requestBlitMask(scrollImage:IAbstractImage, width:Number, height:Number, centerX:Number, centerY:Number, useBaseTexture:Boolean  = false):IAbstractBlitMask
+		
+		/**
+		 * Draw custom bitmap data onto an image
 		 * @param	bitmapData
 		 * @return
 		 */

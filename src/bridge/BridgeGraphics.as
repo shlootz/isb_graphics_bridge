@@ -1,5 +1,6 @@
 package bridge 
 {
+	import bridge.abstract.IAbstractBlitMask;
 	import bridge.abstract.IAbstractDisplayObject;
 	import bridge.abstract.IAbstractEngineLayerVO;
 	import bridge.abstract.IAbstractImage;
@@ -296,6 +297,21 @@ package bridge
 		public function requestImage(name:String):IAbstractImage
 		{
 			return (_graphicsEngine as IEngine).requestImage(_assetsManager.getTexture(name), name) as IAbstractImage;
+		}
+		
+		/**
+		 * 
+		 * @param	scrollImage
+		 * @param	width
+		 * @param	height
+		 * @param	centerX
+		 * @param	centerY
+		 * @param	useBaseTexture
+		 * @return
+		 */
+		public function requestBlitMask(scrollImage:IAbstractImage, width:Number, height:Number, centerX:Number, centerY:Number, useBaseTexture:Boolean  = false):IAbstractBlitMask
+		{
+			return (_graphicsEngine as IEngine).requestBlitMask(scrollImage, width, height, centerX, centerY, useBaseTexture) as IAbstractBlitMask;
 		}
 		
 		/**
