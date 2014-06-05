@@ -8,7 +8,7 @@ package bridge.abstract
 	/**
 	 * Emulates the GreenSock blitmask. Enjoy.
 	 */
-	public interface IAbstractBlitMask 
+	public interface IAbstractBlitMask extends IAbstractDisplayObject
 	{
 		 function addLayerOnTop(layer:IAbstractScrollTile):IAbstractScrollTile
 		 
