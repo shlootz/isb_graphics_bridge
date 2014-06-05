@@ -5,6 +5,9 @@ package bridge.abstract.transitions
 	 * ...
 	 * @author Alex Popescu
 	 */
+	/**
+	 * Generic Transition between states that uses a custom animation and custom completion.
+	 */
 	public interface IAbstractStateTransition 
 	{
 		function doTransition(object1:IAbstractDisplayObject, object2:IAbstractDisplayObject):void

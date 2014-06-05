@@ -6,6 +6,9 @@ package bridge.abstract.ui
 	 * ...
 	 * @author Alex Popescu
 	 */
+	/**
+	 * Contains all the logic of a Button.
+	 */
 	public interface IAbstractButton extends IAbstractDisplayObject
 	{
 		function set idName(value:String):void

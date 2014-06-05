@@ -10,6 +10,9 @@ package bridge.abstract
 	 * Creates and retrieves lauers.
 	 * @see bridge.abstract.IAbstractLayer
 	 */
+	/**
+	 * Manages a dictionary of layers. DOES NOT MANAGE LAYERS THEMSELVES
+	 */
 	public interface IAbstractEngineLayerVO 
 	{
 		/**

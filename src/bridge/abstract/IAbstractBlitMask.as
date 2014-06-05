@@ -3,7 +3,10 @@ package bridge.abstract
 	
 	/**
 	 * ...
-	 * @author Eu
+	 * @author Alex Popescu
+	 */
+	/**
+	 * Emulates the GreenSock blitmask. Enjoy.
 	 */
 	public interface IAbstractBlitMask 
 	{

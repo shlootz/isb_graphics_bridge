@@ -11,6 +11,9 @@ package bridge.abstract
 	 * <p>At its core, the Layer is a Sprite </p>
 	 * @see bridge.abstract.IAbstractSprite
 	 */
+	/**
+	 * A layer is basically a state (extending a DisplayObjectContainer) that is not managed by 3rd party engine.
+	 */
 	public interface IAbstractLayer extends IAbstractState
 	{
 		/**

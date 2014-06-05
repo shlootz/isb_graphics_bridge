@@ -4,6 +4,9 @@ package bridge.abstract.ui
 	 * ...
 	 * @author Alex Popescu
 	 */
+	/**
+	 * VO for align properties
+	 */
 	public class LabelProperties 
 	{
 		

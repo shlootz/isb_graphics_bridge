@@ -10,6 +10,9 @@ package bridge.abstract
 	 * <p><b>Once the transition to a state is complete, the previous state is disposed and the memory is cleared</b></p>
 	 * @see bridge.IEngine
 	 */
+	/**
+	 * A state is a display for the Bridge. There is only one active state at a time.
+	 */
 	public interface IAbstractState extends IAbstractSprite 
 	{
 		/**

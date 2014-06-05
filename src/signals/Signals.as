@@ -5,6 +5,9 @@ package signals
 	 * ...
 	 * @author Alex Popescu
 	 */
+	/**
+	 * Some default signals already used within the engine
+	 */
 	public class Signals 
 	{
 		//General signals

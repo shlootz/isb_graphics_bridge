@@ -27,6 +27,9 @@ package  bridge
 	 * </p>
 	 * @see bridge.abstract.IAbstractEngine
 	 */
+	/**
+	 * IEngine interface contains only the tight coupled methods. All other methods are in IAbstractEngine
+	 */
 	public interface IEngine extends IAbstractEngine
 	{
 		//add custom IEngine behaviour here. 

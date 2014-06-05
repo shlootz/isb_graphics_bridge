@@ -17,6 +17,10 @@ package bridge.abstract
 	 * <p> The IAbstractEngine interface contains all the methods required by the client, except for the tightly coupled ones
 	 * that are included in IEngine, an interface extending IAbstractEngine</p>
 	 */
+	/**
+	 * All the methods required by the client, except for the tightly coupled ones
+	 * that are included in IEngine, an interface extending IAbstractEngine
+	 */
 	public interface IAbstractEngine 
 	{
 		/**

@@ -7,6 +7,9 @@ package bridge.abstract
 	 * ...
 	 * @author Alex Popescu
 	 */
+	/**
+	 * Custom abstrctization of a Display Object
+	 */
 	public interface IAbstractDisplayObject 
 	{
 	/**

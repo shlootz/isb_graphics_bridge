@@ -3,7 +3,10 @@ package bridge.abstract
 	
 	/**
 	 * ...
-	 * @author Eu
+	 * @author Alex Popescu
+	 */
+	/**
+	 * A simple tile used by the Blit Mask
 	 */
 	public interface IAbstractScrollTile 
 	{

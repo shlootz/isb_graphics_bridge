@@ -6,6 +6,9 @@ package bridge.abstract
 	 * ...
 	 * @author Alex Popescu
 	 */
+	/**
+	 * Creates a new text field.
+	 */
 	public interface IAbstractTextField
 	{
 		/**
