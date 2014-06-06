@@ -374,9 +374,9 @@ package bridge
 		 * @return IAbstractLabel
 		 * @see bridge.abstract.ui.IAbstractLabel
 		 */
-		public function requestLabelFromTextfield(text:IAbstractTextField):IAbstractLabel
+		public function requestLabelFromTextfield(text:IAbstractTextField, name:String = ""):IAbstractLabel
 		{
-			var label:IAbstractLabel = (_graphicsEngine as IEngine).requestLabelFromTextfield(text);
+			var label:IAbstractLabel = (_graphicsEngine as IEngine).requestLabelFromTextfield(text, name);
 			return label;
 		}
 		

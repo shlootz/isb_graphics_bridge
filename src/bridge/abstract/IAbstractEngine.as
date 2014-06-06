@@ -46,6 +46,7 @@ package bridge.abstract
 		 * @return
 		 */
 		function requestTexture(name:String):IAbstractTexture
+		
 		/**
 		 * 
 		 * @param	texture
@@ -174,7 +175,7 @@ package bridge.abstract
 		 * @param	text
 		 * @return IAbstractLabel
 		 */
-		function requestLabelFromTextfield(text:IAbstractTextField):IAbstractLabel
+		function requestLabelFromTextfield(text:IAbstractTextField, name:String=""):IAbstractLabel
 		
 		/**
 		 * 

@@ -17,6 +17,7 @@ package bridge
 	import bridge.abstract.IAbstractTexture;
 	import bridge.abstract.IAbstractMask;
 	import bridge.abstract.IAbstractBlitMask;
+	import bridge.abstract.ui.IAbstractLabel;
 	import flash.utils.ByteArray;
 	import flash.media.Sound;
 	import flash.display.BitmapData;
@@ -69,6 +70,13 @@ package bridge
 	 * 
 	 * <p><b>Creating a new button</b></p>
 	 * <p>var button:IAbstractButton = _bridgeGraphics.requestButton();</p>
+	 * 
+	 * <p><b>Coupleing a listener to the button</b></p>
+	 * <p>(_bridgeGraphics.signalsManager as SignalsHub).addListenerToSignal(Signals.GENERIC_BUTTON_PRESSED, buttonPressed);</p>
+	 * private function buttonPressed(type:String, event:Object):void
+	 *	{
+	 *		trace("Caught signal "+type+" "+event)
+	 *	}
 	 * 
 	 * <p><b>Creating a new textField</b></p>
 	 * <p>var t:IAbstractTextField = _bridgeGraphics.requestTextField(150, 30, "Yaaaay", "Times", 30);</p>
@@ -208,6 +216,14 @@ package bridge
 		 * @see bridge.abstract.IAbstractTexture
 		 */
 		function requestTexture(name:String):IAbstractTexture
+		
+		/**
+		 * 
+		 * @param	text
+		 * @param	name
+		 * @return
+		 */
+		 function requestLabelFromTextfield(text:IAbstractTextField, name:String = ""):IAbstractLabel
 		
 		/** 
 		 * Creates a new  image
