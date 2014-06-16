@@ -70,6 +70,8 @@ package bridge
 	 * 
 	 * <p><b>Creating a new button</b></p>
 	 * <p>var button:IAbstractButton = _bridgeGraphics.requestButton();</p>
+	 * <p>button.addEventListener(BridgeEvents.TRIGGERED, button_triggeredHandler);</p>
+	 * <p>(BridgeEvents.extractCurrentTarget(e) as IAbstractButton)</p>
 	 * 
 	 * <p><b>Coupleing a listener to the button</b></p>
 	 * <p>(_bridgeGraphics.signalsManager as SignalsHub).addListenerToSignal(Signals.GENERIC_BUTTON_PRESSED, buttonPressed);</p>
