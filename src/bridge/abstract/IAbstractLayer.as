@@ -47,6 +47,11 @@ package bridge.abstract
 		 * @param	applyNow
 		 */
 		function injectLayout(layout:XML, applyNow:Boolean = false):void
+		
+		/**
+		 * 
+		 */
+		 function destroyAll():void
 	}
 	
 }

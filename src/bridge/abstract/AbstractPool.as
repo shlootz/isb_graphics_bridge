@@ -14,6 +14,7 @@ package bridge.abstract
 		private var _size:uint;
 		//private var _pool:Vector.<*>; //if non SWC version
 		private var _pool:Array;
+		private var _args:Array;
 		
 		/**
 		 * 
@@ -37,48 +38,99 @@ package bridge.abstract
 		 */
 	    public function ObjPool(poolsize:uint, _type:Class, args:Array):void
 		{
+			_args = args;
+			
 			var className:String = getQualifiedClassName(_type);
 			var vectorClass:Class  = Class(getDefinitionByName("Vector.<" + className + ">"));
 			var i:uint = _size;
 			//_pool = new vectorClass(poolsize); //if non SWC version
-			_pool = new Array(poolsize);
+			_pool = new Array();
 			
 			 while ( --i > -1 ) 
 			 {
 				 switch (args.length)
 				 {
 					 case 0:
-						 _pool[i] = new _type(); 
+						_pool.push(new _type()); 
 						 break;
 					 case 1:
-						 _pool[i] = new _type(args[0]); 
+						_pool.push(new _type(args[0])); 
 						 break;
 					 case 2:
-						 _pool[i] = new _type(args[0], args[1]); 
+						 _pool.push(new _type(args[0], args[1])); 
 						 break;
 					 case 3:
-						  _pool[i] = new _type(args[0], args[1], args[2]); 
+						 _pool.push(new _type(args[0], args[1], args[2])); 
 						 break;
 					 case 4:
-						  _pool[i] = new _type(args[0], args[1], args[2], args[3]); 
+						 _pool.push(new _type(args[0], args[1], args[2], args[3])); 
 						 break;
 					 case 5:
-						  _pool[i] = new _type(args[0], args[1], args[2], args[3], args[4]); 
+						_pool.push(new _type(args[0], args[1], args[2], args[3], args[4])); 
 						 break;
 					 case 6:
-						  _pool[i] = new _type(args[0], args[1], args[2], args[3], args[4], args[5]); 
+						  _pool.push( new _type(args[0], args[1], args[2], args[3], args[4], args[5])); 
 						 break;
 					 case 7:
-						  _pool[i] = new _type(args[0], args[1], args[2], args[3], args[4], args[5], args[6]); 
+						 _pool.push(new _type(args[0], args[1], args[2], args[3], args[4], args[5], args[6])); 
 						 break;
 					 case 8:
-						  _pool[i] = new _type(args[0], args[1], args[2], args[3], args[4], args[5], args[6], args[7]); 
+						 _pool.push(new _type(args[0], args[1], args[2], args[3], args[4], args[5], args[6], args[7])); 
 						 break;
 					 case 9:
-						  _pool[i] = new _type(args[0], args[1], args[2], args[3], args[4], args[5], args[6], args[7], args[8]); 
+						 _pool.push(new _type(args[0], args[1], args[2], args[3], args[4], args[5], args[6], args[7], args[8])); 
 						 break;
 					 case 10:
-						  _pool[i] = new _type(args[0], args[1], args[2], args[3], args[4], args[5], args[6], args[7], args[8], args[9]); 
+						 _pool.push(new _type(args[0], args[1], args[2], args[3], args[4], args[5], args[6], args[7], args[8], args[9])); 
+						 break;
+				 }
+			 }	
+		}
+		
+		/**
+		 * 
+		 * @param	newSpritesNumber
+		 */
+		public function growPool(newNumber:uint):void
+		{
+			var i:uint = _size;
+			
+			  while ( --i > -1 ) 
+			 {
+				 switch (_args.length)
+				 {
+					 case 0:
+						_pool.push(new _type()); 
+						 break;
+					 case 1:
+						_pool.push(new _type(_args[0])); 
+						 break;
+					 case 2:
+						 _pool.push(new _type(_args[0], _args[1])); 
+						 break;
+					 case 3:
+						 _pool.push(new _type(_args[0], _args[1], _args[2])); 
+						 break;
+					 case 4:
+						 _pool.push(new _type(_args[0], _args[1], _args[2], _args[3])); 
+						 break;
+					 case 5:
+						_pool.push(new _type(_args[0], _args[1], _args[2], _args[3], _args[4])); 
+						 break;
+					 case 6:
+						  _pool.push( new _type(_args[0], _args[1], _args[2], _args[3], _args[4], _args[5])); 
+						 break;
+					 case 7:
+						 _pool.push(new _type(_args[0], _args[1], _args[2], _args[3], _args[4], _args[5], _args[6])); 
+						 break;
+					 case 8:
+						 _pool.push(new _type(_args[0], _args[1], _args[2], _args[3], _args[4], _args[5], _args[6], _args[7])); 
+						 break;
+					 case 9:
+						 _pool.push(new _type(_args[0], _args[1], _args[2], _args[3], _args[4], _args[5], _args[6], _args[7], _args[8])); 
+						 break;
+					 case 10:
+						 _pool.push(new _type(_args[0], _args[1], _args[2], _args[3], _args[4], _args[5], _args[6], _args[7], _args[8], _args[9])); 
 						 break;
 				 }
 			 }	
@@ -92,9 +144,9 @@ package bridge.abstract
 		{
 			var newObj:Object;
 			
-			if (_pool.length == 0)
+			if (_pool.length == 1)
 			{
-				_pool.push(new Object());
+				growPool(10);
 			}
 			
 			newObj = _pool.shift();
@@ -109,17 +161,6 @@ package bridge.abstract
 		public function returnToPool(target:Object):void
 		{
 			_pool.push(target);
-		}
-		
-		/**
-		 * 
-		 * @param	newSpritesNumber
-		 */
-		public function growPool(newSpritesNumber:uint):void
-		{
-			var i:uint = _size;
-			 while( --i > -1 ) 
-                _pool.push(new _type()); 
 		}
 		
 		/**
