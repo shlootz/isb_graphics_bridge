@@ -38,8 +38,16 @@ package bridge.abstract
 		
 		/**
 		 * 
+		 * @return
 		 */
 		function get layout():Dictionary
+		
+		/**
+		 * 
+		 * @param	name
+		 * @return
+		 */
+		function getElement(name:String):IAbstractDisplayObject
 		
 		/**
 		 * Inserts the XML layout of the elements
