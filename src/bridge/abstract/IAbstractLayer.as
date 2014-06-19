@@ -37,13 +37,13 @@ package bridge.abstract
 		function set layerDepth(val:uint ):void
 		
 		/**
-		 * 
+		 * Returns a dictionary containing the stored VOs
 		 * @return
 		 */
 		function get layout():Dictionary
 		
 		/**
-		 * 
+		 * Returns a specific IAbstractDisplayObject child
 		 * @param	name
 		 * @return
 		 */
