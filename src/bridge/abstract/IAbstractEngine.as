@@ -182,7 +182,7 @@ package bridge.abstract
 		 * @param	textureClass
 		 * @param	xml
 		 */
-		function registerBitmapFont(textureClass:Class, xml:XML):void
+		function registerBitmapFont(textureClass:Class, xml:XML):String
 		
 		/**
 		 * 
