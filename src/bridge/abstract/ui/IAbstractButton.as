@@ -264,7 +264,9 @@ package bridge.abstract.ui
 		
 		function scaleSkin_ () : void
 		
-		function addCustomLabel(customLabel:IAbstractLabel,align:String = "center", customAlign:Point = null):void
+		function addCustomLabel(customLabel:IAbstractLabel, align:String = "center", customAlign:Point = null):void
+		
+		function get customLabel():IAbstractLabel
 		
 		function updateCustomLabel(labelText:String):void
 		

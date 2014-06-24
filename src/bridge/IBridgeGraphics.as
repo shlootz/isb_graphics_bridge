@@ -21,6 +21,9 @@ package bridge
 	import flash.utils.ByteArray;
 	import flash.media.Sound;
 	import flash.display.BitmapData;
+	import bridge.abstract.filters.IAbstractDropShadowFilter;
+	import bridge.abstract.filters.IAbstractGlowFilter;
+	import bridge.abstract.filters.IAbstractBlurFilter;
 	
 	/**
 	 * ...
@@ -352,11 +355,30 @@ package bridge
 		function requestLayersVO():IAbstractEngineLayerVO
 		
 		/**
+		 * 
+		 * @return
+		 */
+		function requestDropShadowFilter():IAbstractDropShadowFilter
+		
+		/**
+		 * 
+		 * @return
+		 */
+		function requestGlowFilter():IAbstractGlowFilter
+		
+		/**
+		 * 
+		 * @return
+		 */
+		function requestBlurFilter():IAbstractBlurFilter
+		
+		/**
 		 * Returns a store XML from the Assets Manager
 		 * @param	name
 		 * @return XML
 		 */
 		function getXMLFromAssetsManager(name:String):XML
+		
 		
 		/** 
 		 * Makes the transition to a new state
@@ -403,6 +425,27 @@ package bridge
 		 * @param	child
 		 */
 		function addChild(child:Object):void
+		
+		/**
+		 * 
+		 * @param	target
+		 * @param	vo
+		 */
+		function addBlurFilter (target:IAbstractDisplayObject, vo:IAbstractBlurFilter) : void;
+		
+		/**
+		 * 
+		 * @param	target
+		 * @param	vo
+		 */
+		function addDropShadowFilter (target:IAbstractDisplayObject, vo:IAbstractDropShadowFilter) : void;
+		
+		/**
+		 * 
+		 * @param	target
+		 * @param	vo
+		 */
+		function addGlowFilter (target:IAbstractDisplayObject, vo:IAbstractGlowFilter) : void;
 		
 		/**
 		 * Saves a byte array in Assets Manager

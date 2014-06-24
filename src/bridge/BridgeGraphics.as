@@ -1,5 +1,8 @@
 package bridge 
 {
+	import bridge.abstract.filters.IAbstractBlurFilter;
+	import bridge.abstract.filters.IAbstractDropShadowFilter;
+	import bridge.abstract.filters.IAbstractGlowFilter;
 	import bridge.abstract.IAbstractBlitMask;
 	import bridge.abstract.IAbstractDisplayObject;
 	import bridge.abstract.IAbstractEngineLayerVO;
@@ -360,6 +363,36 @@ package bridge
 		
 		/**
 		 * 
+		 * @return
+		 */
+		public function requestDropShadowFilter():IAbstractDropShadowFilter
+		{
+			var obj:IAbstractDropShadowFilter = (_graphicsEngine as IEngine).requestDropShadowFilter();
+			return obj
+		}
+		
+		/**
+		 * 
+		 * @return
+		 */
+		public function requestGlowFilter():IAbstractGlowFilter
+		{
+			var obj:IAbstractGlowFilter = (_graphicsEngine as IEngine).requestGlowFilter();
+			return obj
+		}
+		
+		/**
+		 * 
+		 * @return
+		 */
+		public function requestBlurFilter():IAbstractBlurFilter
+		{
+			var obj:IAbstractBlurFilter = (_graphicsEngine as IEngine).requestBlurFilter();
+			return obj
+		}
+		
+		/**
+		 * 
 		 * @param	textureClass
 		 * @param	xml
 		 */
@@ -506,6 +539,36 @@ package bridge
 		{
 			_graphicsEngine.engineStage.addChild(child);
 		}
+		
+		 /**
+		  * 
+		  * @param	target
+		  * @param	vo
+		  */
+		 public function addDropShadowFilter(target:IAbstractDisplayObject, vo:IAbstractDropShadowFilter):void
+		 {
+			_graphicsEngine.addDropShadowFilter(target, vo);
+		 }
+		 
+		 	 /**
+		  * 
+		  * @param	target
+		  * @param	vo
+		  */
+		 public function addGlowFilter(target:IAbstractDisplayObject, vo:IAbstractGlowFilter):void
+		 {
+				_graphicsEngine.addGlowFilter(target, vo);
+		 }
+		 
+		 /**
+		  * 
+		  * @param	target
+		  * @param	vo
+		  */
+		 public function addBlurFilter(target:IAbstractDisplayObject, vo:IAbstractBlurFilter):void
+		 {
+			  	_graphicsEngine.addBlurFilter(target, vo);
+		 }
 		
 		/**
 		 * 

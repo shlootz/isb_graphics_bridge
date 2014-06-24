@@ -1,5 +1,8 @@
 package bridge.abstract 
 {
+	import bridge.abstract.filters.IAbstractBlurFilter;
+	import bridge.abstract.filters.IAbstractDropShadowFilter;
+	import bridge.abstract.filters.IAbstractGlowFilter;
 	import bridge.abstract.transitions.IAbstractStateTransition;
 	import flash.events.Event;
 	import bridge.abstract.transitions.IAbstractLayerTransitionIn;
@@ -237,6 +240,45 @@ package bridge.abstract
 		 * @see bridge.abstract.IAbstractLayerTransitionOut 
 		 */
 		function initLayers(inputLayers:Dictionary, inTransition:IAbstractLayerTransitionIn = null, outTransition:IAbstractLayerTransitionOut = null):void
+		
+		/**
+		 * 
+		 * @return
+		 */
+		function requestDropShadowFilter():IAbstractDropShadowFilter
+		
+		/**
+		 * 
+		 * @return
+		 */
+		function requestGlowFilter():IAbstractGlowFilter
+		
+		/**
+		 * 
+		 * @return
+		 */
+		function requestBlurFilter():IAbstractBlurFilter
+		
+		/**
+		 * 
+		 * @param	target
+		 * @param	vo
+		 */
+		function addDropShadowFilter(target:IAbstractDisplayObject, vo:IAbstractDropShadowFilter):void
+		
+		/**
+		 * 
+		 * @param	target
+		 * @param	vo
+		 */
+		function addGlowFilter(target:IAbstractDisplayObject, vo:IAbstractGlowFilter):void
+		
+		/**
+		 * 
+		 * @param	target
+		 * @param	vo
+		 */
+		function addBlurFilter(target:IAbstractDisplayObject, vo:IAbstractBlurFilter):void
 		
 		/**
 		 * 
