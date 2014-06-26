@@ -642,6 +642,16 @@ package bridge
 		}
 		
 		/**
+		 * 
+		 * @param	name
+		 * @return Sound
+		 */
+		public function retrieveSound(name:String):Sound
+		{
+			return _assetsManager.getSound(name);
+		}
+		
+		/**
 		 * @todo make abstract assets manager methods
 		 * @param	name
 		 * @param	texture

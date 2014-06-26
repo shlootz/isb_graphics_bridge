@@ -469,6 +469,13 @@ package bridge
 		function storeSound(name:String, sound:Sound):void
 		
 		/**
+		 * 
+		 * @param	name
+		 * @return
+		 */
+		function retrieveSound(name:String):Sound
+		
+		/**
 		 * Saves a new texture in Assets Manager
 		 * @param	name
 		 * @param	texture
