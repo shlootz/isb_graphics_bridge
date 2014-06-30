@@ -301,7 +301,7 @@ package bridge
 		 * @param	textureClass
 		 * @param	xml
 		 */
-		function registerBitmapFont(textureClass:Class, xml:XML):String
+		function registerBitmapFont(textureClass:Class, xml:XML, fontName:String = ""):String
 		
 		/** Build an empty sprite
 		 * 

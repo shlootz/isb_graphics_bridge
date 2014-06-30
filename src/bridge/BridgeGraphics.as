@@ -396,7 +396,7 @@ package bridge
 		 * @param	textureClass
 		 * @param	xml
 		 */
-		public function registerBitmapFont(textureClass:Class, xml:XML):String
+		public function registerBitmapFont(textureClass:Class, xml:XML, fontName:String = ""):String
 		{
 			return (_graphicsEngine as IEngine).registerBitmapFont(textureClass, xml);
 		}
