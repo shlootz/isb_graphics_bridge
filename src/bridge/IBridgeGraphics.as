@@ -21,6 +21,7 @@ package bridge
 	import flash.utils.ByteArray;
 	import flash.media.Sound;
 	import flash.display.BitmapData;
+	import flash.display.Bitmap;
 	import bridge.abstract.filters.IAbstractDropShadowFilter;
 	import bridge.abstract.filters.IAbstractGlowFilter;
 	import bridge.abstract.filters.IAbstractBlurFilter;
@@ -301,7 +302,7 @@ package bridge
 		 * @param	textureClass
 		 * @param	xml
 		 */
-		function registerBitmapFont(textureClass:Class, xml:XML, fontName:String = ""):String
+		function registerBitmapFont(textureBitmap:Bitmap, xml:XML, fontName:String = ""):String
 		
 		/** Build an empty sprite
 		 * 

@@ -12,6 +12,7 @@ package bridge.abstract
 	import bridge.abstract.ui.IAbstractLabel;
 	import flash.utils.Dictionary
 	import flash.display.BitmapData;
+	import flash.display.Bitmap;
 	
 	/**
 	 * ...
@@ -185,7 +186,7 @@ package bridge.abstract
 		 * @param	textureClass
 		 * @param	xml
 		 */
-		function registerBitmapFont(textureClass:Class, xml:XML, fontName:String = ""):String
+		function registerBitmapFont(textureBitmap:Bitmap, xml:XML, fontName:String = ""):String
 		
 		/**
 		 * 

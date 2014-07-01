@@ -21,6 +21,7 @@ package bridge
 	import bridge.abstract.ui.IAbstractButton;
 	import bridge.abstract.IAbstractTextField;
 	import bridge.abstract.ui.IAbstractLabel;
+	import flash.display.Bitmap;
 	import flash.display.BitmapData;
 	import flash.geom.Point;
 	import flash.media.Sound;
@@ -396,9 +397,9 @@ package bridge
 		 * @param	textureClass
 		 * @param	xml
 		 */
-		public function registerBitmapFont(textureClass:Class, xml:XML, fontName:String = ""):String
+		public function registerBitmapFont(textureBitmap:Bitmap, xml:XML, fontName:String = ""):String
 		{
-			return (_graphicsEngine as IEngine).registerBitmapFont(textureClass, xml);
+			return (_graphicsEngine as IEngine).registerBitmapFont(textureBitmap, xml);
 		}
 		
 		/**
