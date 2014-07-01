@@ -397,6 +397,12 @@ package bridge
 		 */
 		function initLayers(inputLayers:Dictionary, inTransition:IAbstractLayerTransitionIn = null, outTransition:IAbstractLayerTransitionOut = null):void
 		
+		/**
+		 * 
+		 * @param	layer
+		 */
+		function drawLayerLayout(layer:IAbstractLayer):void
+		
 		/** 
 		 * Receives 2 vectors of IAbstractLayer and updates the layers in the current state
 		 * @param	inLayers

@@ -243,6 +243,12 @@ package bridge.abstract
 		
 		/**
 		 * 
+		 * @param	layer
+		 */
+		function drawLayerLayout(layer:IAbstractLayer):void
+		
+		/**
+		 * 
 		 * @return
 		 */
 		function requestDropShadowFilter():IAbstractDropShadowFilter

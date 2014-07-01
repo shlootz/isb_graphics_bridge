@@ -583,6 +583,15 @@ package bridge
 		
 		/**
 		 * 
+		 * @param	layer
+		 */
+		public function drawLayerLayout(layer:IAbstractLayer):void
+		{
+			_graphicsEngine.drawLayerLayout(layer);
+		}
+		
+		/**
+		 * 
 		 * @param	inLayers
 		 * @param	outLayers
 		 * @param	inTransition
