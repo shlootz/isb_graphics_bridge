@@ -59,6 +59,12 @@ package bridge.abstract
 		/**
 		 * 
 		 */
+		 function set addToStage(val:Boolean ):void
+		 function get addToStage():Boolean
+		
+		/**
+		 * 
+		 */
 		 function destroyAll():void
 	}
 	
