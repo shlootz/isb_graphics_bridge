@@ -10,6 +10,26 @@ package bridge.abstract
 	 * <p>Use layers to organise the display tree</p>
 	 * <p>At its core, the Layer is a Sprite </p>
 	 * @see bridge.abstract.IAbstractSprite
+	 * 
+	 * A layer can be injected with a layout and auto add the the items there. The layout itself is an XML file:
+		 * 
+	 * <Layout name="Paytable_layout"> <b>The main layout header</b>
+	 *<Main> <b>The main contains more sub-layouts, but by default the engine will draw the Main one</b>
+	 *<!--Layout Properties--> <b>A few properties, like name and position</b>
+	 *		<Element name="props" type="layerProperties" layerX="0" layerY="0" depth="-1"/>
+	 *	
+	 * 	<!--Layout Background --> <b>A list of elements that will be drawn onto the layer</b>
+	 *	<Element name="ui_background" resource="Paytable-Background" type = "image" onStage = "true" x="0" y="0" width="800" height="600" depth="0"/>
+	 *	
+	 *</Main>
+	 *
+	 *<!-- Subelement -->  <b>The Sub-layouts must be treated sepparately in your logic </b>
+	 *<Pages>
+	 *	<Layout name="Page0">
+	 *		<Element name="props" type="layerProperties" layerX="0" layerY="0" depth="-1"/>
+	 *	</Layout>
+	 *</Pages>
+	 *</Layout>
 	 */
 	/**
 	 * A layer is basically a state (extending a DisplayObjectContainer) that is not managed by 3rd party engine.
