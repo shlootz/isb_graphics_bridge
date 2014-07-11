@@ -35,6 +35,21 @@ package bridge.abstract
 	public interface IAbstractDisplayObjectContainer extends IAbstractDisplayObject
 	{	
 		/**
+		 * 
+		 * @param	signalsManager
+		 * @param	onClick
+		 * @param	onHover
+		 * @param	onEnded
+		 * @param	onMoved
+		 * @param	onStationary
+		 */
+		function updateMouseGestures(signalsManager:Object = null, 
+																		onClick:Boolean = false, 	
+																		onHover:Boolean = false, 
+																		onEnded:Boolean = false, 
+																		onMoved:Boolean = false, 
+																		onStationary:Boolean = false):void
+		/**
 		 * @return Returns the number of children contained
 		 */
 		function get numChildren () : int;
