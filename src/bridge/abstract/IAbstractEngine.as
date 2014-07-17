@@ -4,6 +4,7 @@ package bridge.abstract
 	import bridge.abstract.filters.IAbstractDropShadowFilter;
 	import bridge.abstract.filters.IAbstractGlowFilter;
 	import bridge.abstract.transitions.IAbstractStateTransition;
+	import bridge.abstract.ui.IAbstractSlider;
 	import bridge.abstract.ui.IAbstractToggle;
 	import flash.events.Event;
 	import bridge.abstract.transitions.IAbstractLayerTransitionIn;
@@ -181,6 +182,25 @@ package bridge.abstract
 		 * @return
 		 */
 		function requestToggleButton(name:String = ""):IAbstractToggle
+		
+		/**
+		 * 
+		 * @param	name
+		 * @param	thumbUpSkin
+		 * @param	thumbDownSkin
+		 * @param	trackUpSkin
+		 * @param	trackDownSkin
+		 * @param	backgroundSkin
+		 * @param	label
+		 * @return
+		 */
+		 function requestSlider(			thumbUpSkin:IAbstractImage,
+														thumbDownSkin:IAbstractImage, 
+														trackUpSkin:IAbstractImage, 
+														trackDownSkin:IAbstractImage,
+														backgroundSkin:IAbstractImage,
+														label:IAbstractLabel,
+														name:String = ""):IAbstractSlider
 		
 		/**
 		 * 

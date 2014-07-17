@@ -25,6 +25,9 @@ package signals
 		//Generic button
 		public static const GENERIC_BUTTON_PRESSED:String = "GEbuttonPressed"
 		
+		//Generic slider changed
+		public static const GENERIC_SLIDER_CHANGE:String = "GESliderChanged"
+		
 		//Generic toggle Button
 		public static const GENERIC_TOGGLE_BUTTON_PRESSED:String = "GEtoggleButtonPressed"
 		

@@ -5,6 +5,7 @@ package bridge
 	import bridge.abstract.IAbstractLayer;
 	import bridge.abstract.IAbstractMovie;
 	import bridge.abstract.transitions.IAbstractStateTransition;
+	import bridge.abstract.ui.IAbstractSlider;
 	import bridge.abstract.ui.IAbstractToggle;
 	import flash.utils.Dictionary;
 	import bridge.abstract.IAbstractImage;
@@ -326,6 +327,25 @@ package bridge
 		 * @return
 		 */
 		function requestToggleButton(name:String = ""):IAbstractToggle
+		
+		/**
+		 * 
+		 * @param	name
+		 * @param	thumbUpSkin
+		 * @param	thumbDownSkin
+		 * @param	trackUpSkin
+		 * @param	trackDownSkin
+		 * @param	backgroundSkin
+		 * @param	label
+		 * @return
+		 */
+		 function requestSlider(			thumbUpSkin:IAbstractImage,
+														thumbDownSkin:IAbstractImage, 
+														trackUpSkin:IAbstractImage, 
+														trackDownSkin:IAbstractImage,
+														backgroundSkin:IAbstractImage,
+														label:IAbstractLabel,
+														name:String = ""):IAbstractSlider
 		
 		/**
 		 * Builds a new container that contains both the masked object and the mask itself.

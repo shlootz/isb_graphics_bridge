@@ -22,6 +22,7 @@ package bridge
 	import bridge.abstract.ui.IAbstractButton;
 	import bridge.abstract.IAbstractTextField;
 	import bridge.abstract.ui.IAbstractLabel;
+	import bridge.abstract.ui.IAbstractSlider;
 	import bridge.abstract.ui.IAbstractToggle;
 	import flash.display.Bitmap;
 	import flash.display.BitmapData;
@@ -455,6 +456,28 @@ package bridge
 		public function requestToggleButton(name:String = ""):IAbstractToggle
 		{
 				return(_graphicsEngine as IEngine).requestToggleButton(name) as IAbstractToggle;
+		}
+		
+		/**
+		 * 
+		 * @param	name
+		 * @param	thumbUpSkin
+		 * @param	thumbDownSkin
+		 * @param	trackUpSkin
+		 * @param	trackDownSkin
+		 * @param	backgroundSkin
+		 * @param	label
+		 * @return
+		 */
+		public function requestSlider(	thumbUpSkin:IAbstractImage,
+														thumbDownSkin:IAbstractImage, 
+														trackUpSkin:IAbstractImage, 
+														trackDownSkin:IAbstractImage,
+														backgroundSkin:IAbstractImage,
+														label:IAbstractLabel,
+														name:String = ""):IAbstractSlider
+		{
+			return (_graphicsEngine as IEngine).requestSlider(thumbUpSkin, thumbDownSkin, trackUpSkin, trackDownSkin, backgroundSkin, label)
 		}
 		
 		/** Builds an empty state
