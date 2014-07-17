@@ -13,7 +13,7 @@ package bridge.abstract.transitions
 		function doTransition(object1:IAbstractDisplayObject, object2:IAbstractDisplayObject):void
 		function injectAnimation(func:Function):void
 		function injectOnTransitionComplete(fct:Function):void
-		function onTransitionComplete(object1:IAbstractDisplayObject, object2:IAbstractDisplayObject):void
+		function onTransitionComplete(object1:IAbstractDisplayObject, object2:IAbstractDisplayObject, customParams:Object = null):void
 	}
 	
 }

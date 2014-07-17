@@ -1,9 +1,11 @@
 package bridge 
 {
+	import bridge.abstract.IAbstractDisplayObjectContainer;
 	import bridge.abstract.IAbstractEngineLayerVO;
 	import bridge.abstract.IAbstractLayer;
 	import bridge.abstract.IAbstractMovie;
 	import bridge.abstract.transitions.IAbstractStateTransition;
+	import bridge.abstract.ui.IAbstractToggle;
 	import flash.utils.Dictionary;
 	import bridge.abstract.IAbstractImage;
 	import bridge.abstract.IAbstractSprite;
@@ -319,6 +321,13 @@ package bridge
 		function requestButton(name:String = ""):IAbstractButton
 		
 		/**
+		 * 
+		 * @param	name
+		 * @return
+		 */
+		function requestToggleButton(name:String = ""):IAbstractToggle
+		
+		/**
 		 * Builds a new container that contains both the masked object and the mask itself.
 		 * @param	maskedObject
 		 * @param	mask
@@ -396,7 +405,7 @@ package bridge
 		 * @param	inTransition
 		 * @param	outTransition
 		 */
-		function initLayers(inputLayers:Dictionary, inTransition:IAbstractLayerTransitionIn = null, outTransition:IAbstractLayerTransitionOut = null):void
+		//function initLayers(container:IAbstractDisplayObjectContainer, inputLayers:Dictionary, inTransition:IAbstractLayerTransitionIn = null, outTransition:IAbstractLayerTransitionOut = null):void
 		
 		/**
 		 * 
@@ -410,7 +419,7 @@ package bridge
 		 * @param	outLayers
 		 * @see  bridge.abstract.IAbstractLayer and updates the layers in the current state
 		 */
-		function updateLayers(inLayers:Vector.<IAbstractLayer> = null, outLayers:Vector.<IAbstractLayer> = null, inTransition:IAbstractLayerTransitionIn = null, outTransition:IAbstractLayerTransitionOut = null ):void
+		function updateLayers(container:IAbstractDisplayObjectContainer, inLayers:Vector.<IAbstractLayer> = null, outLayers:Vector.<IAbstractLayer> = null, inTransition:IAbstractLayerTransitionIn = null, outTransition:IAbstractLayerTransitionOut = null ):void
 		
 		/** 
 		 * Swaps layer1 with layer2
@@ -425,6 +434,7 @@ package bridge
 		 * @return Returns a Dictionary containing all the current state layers
 		 */
 		function get layers():Dictionary
+		function set layers(val:Dictionary):void
 		
 		/** 
 		 * Adds child to the default Stage. Please note that this will put the child on the top index.
@@ -495,6 +505,11 @@ package bridge
 		 * @param	atlasPng
 		 */
 		function storeAtlas(name:String, atlasXml:XML, atlasPng:Class):void
+		
+		/**
+		 * 
+		 */
+		function get currentContainer():IAbstractState
 		
 		/**
 		 * 

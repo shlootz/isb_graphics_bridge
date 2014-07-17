@@ -1,5 +1,6 @@
 package bridge.abstract 
 {
+	import flash.utils.Dictionary;
 	
 	/**
 	 * ...

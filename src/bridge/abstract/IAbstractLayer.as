@@ -37,6 +37,12 @@ package bridge.abstract
 	public interface IAbstractLayer extends IAbstractState
 	{
 		/**
+		 * 
+		 */
+		function set redrawEnabled(val:Boolean):void
+		function get redrawEnabled():Boolean
+		
+		/**
 		 * @param name Sets the layer name by witch it can be later identified
 		 */
 		function set layerName(name:String):void

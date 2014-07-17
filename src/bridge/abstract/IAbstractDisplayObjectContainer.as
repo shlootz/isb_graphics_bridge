@@ -3,6 +3,7 @@ package bridge.abstract
 	import flash.geom.Matrix;
 	import flash.geom.Point;
 	import flash.geom.Rectangle;
+	import flash.utils.Dictionary;
 	/**
 	 * ...
 	 * @author Alex Popescu
@@ -181,6 +182,12 @@ package bridge.abstract
 		 * @param	index2
 		 */
 		function swapChildrenAtIndex (index1:int, index2:int) : void;
+		
+		/**
+		 * 
+		 */
+		function get layers():Dictionary;
+		function set layers(val:Dictionary):void
 	}
 	
 }

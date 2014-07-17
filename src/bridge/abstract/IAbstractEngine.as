@@ -4,6 +4,7 @@ package bridge.abstract
 	import bridge.abstract.filters.IAbstractDropShadowFilter;
 	import bridge.abstract.filters.IAbstractGlowFilter;
 	import bridge.abstract.transitions.IAbstractStateTransition;
+	import bridge.abstract.ui.IAbstractToggle;
 	import flash.events.Event;
 	import bridge.abstract.transitions.IAbstractLayerTransitionIn;
 	import bridge.abstract.transitions.IAbstractLayerTransitionOut;
@@ -176,6 +177,13 @@ package bridge.abstract
 		
 		/**
 		 * 
+		 * @param	name
+		 * @return
+		 */
+		function requestToggleButton(name:String = ""):IAbstractToggle
+		
+		/**
+		 * 
 		 * @param	text
 		 * @return IAbstractLabel
 		 */
@@ -233,6 +241,7 @@ package bridge.abstract
 		 * 
 		 */
 		function get layers():Dictionary
+		function set layers(val:Dictionary):void
 		
 		/**
 		 * 
@@ -240,7 +249,7 @@ package bridge.abstract
 		 * @see bridge.abstract.IAbstractLayerTransitionIn 
 		 * @see bridge.abstract.IAbstractLayerTransitionOut 
 		 */
-		function initLayers(inputLayers:Dictionary, inTransition:IAbstractLayerTransitionIn = null, outTransition:IAbstractLayerTransitionOut = null):void
+		function initLayers(container:IAbstractDisplayObjectContainer, inputLayers:Dictionary, inTransition:IAbstractLayerTransitionIn = null, outTransition:IAbstractLayerTransitionOut = null):void
 		
 		/**
 		 * 
@@ -303,7 +312,12 @@ package bridge.abstract
 		 * @see bridge.abstract.IAbstractLayerTransitionIn 
 		 * @see bridge.abstract.IAbstractLayerTransitionOut 
 		 */
-		function updateLayers(inLayers:Vector.<IAbstractLayer> = null, outLayers:Vector.<IAbstractLayer> = null, inTransition:IAbstractLayerTransitionIn = null, outTransition:IAbstractLayerTransitionOut = null):void
+		function updateLayers(container:IAbstractDisplayObjectContainer, inLayers:Vector.<IAbstractLayer> = null, outLayers:Vector.<IAbstractLayer> = null, inTransition:IAbstractLayerTransitionIn = null, outTransition:IAbstractLayerTransitionOut = null):void
+		
+		/**
+		 * 
+		 */
+		function get currentContainer():IAbstractState
 		
 		/**
 		 * 

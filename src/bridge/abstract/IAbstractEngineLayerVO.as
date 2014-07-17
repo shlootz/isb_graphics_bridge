@@ -31,6 +31,7 @@ package bridge.abstract
 		 * @return Returns the layers dictionary
 		 */
 		function get layers():Dictionary
+		function set layers(val:Dictionary):void
 	}
 	
 }

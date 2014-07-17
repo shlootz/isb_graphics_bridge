@@ -1,19 +1,37 @@
 package bridge.abstract.ui 
 {
+	import bridge.abstract.IAbstractDisplayObject;
+	import bridge.abstract.IAbstractImage;
+	import flash.geom.Point;
 	/**
 	 * ...
 	 * @author Alex Popescu
 	 */
 	/**
-	 * Toggle component interface. 
+	 * Contains all the logic of a Button.
 	 */
-	public class IAbstractToggle 
+	public interface IAbstractToggle extends IAbstractButton
 	{
-		
-		public function IAbstractToggle() 
-		{
+		/**
+			 * 
+			 * @param	val
+			 */
+			function toggle(val:Boolean):void
 			
-		}
+			/**
+			 * 
+			 */
+			function get state():Boolean
+			
+			/**
+			 * 
+			 */
+			function set toggleTrueImage(val:IAbstractImage):void
+			
+			/**
+			 * 
+			 */
+			function set toggleFalseImage(val:IAbstractImage):void
 		
 	}
 

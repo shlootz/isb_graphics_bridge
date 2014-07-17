@@ -5,6 +5,7 @@ package bridge
 	import bridge.abstract.filters.IAbstractGlowFilter;
 	import bridge.abstract.IAbstractBlitMask;
 	import bridge.abstract.IAbstractDisplayObject;
+	import bridge.abstract.IAbstractDisplayObjectContainer;
 	import bridge.abstract.IAbstractEngineLayerVO;
 	import bridge.abstract.IAbstractImage;
 	import bridge.abstract.IAbstractLayer;
@@ -21,6 +22,7 @@ package bridge
 	import bridge.abstract.ui.IAbstractButton;
 	import bridge.abstract.IAbstractTextField;
 	import bridge.abstract.ui.IAbstractLabel;
+	import bridge.abstract.ui.IAbstractToggle;
 	import flash.display.Bitmap;
 	import flash.display.BitmapData;
 	import flash.geom.Point;
@@ -445,6 +447,16 @@ package bridge
 			return(_graphicsEngine as IEngine).requestButton(name) as IAbstractButton;
 		}
 		
+		/**
+		 * 
+		 * @param	name
+		 * @return
+		 */
+		public function requestToggleButton(name:String = ""):IAbstractToggle
+		{
+				return(_graphicsEngine as IEngine).requestToggleButton(name) as IAbstractToggle;
+		}
+		
 		/** Builds an empty state
 		 * 
 		 * @return Returns an IAbstractState
@@ -577,9 +589,9 @@ package bridge
 		 * @param	inTransition
 		 * @param	outTransition
 		 */
-		public function initLayers(inputLayers:Dictionary, inTransition:IAbstractLayerTransitionIn = null, outTransition:IAbstractLayerTransitionOut = null):void
+		public function initLayers(container:IAbstractDisplayObjectContainer, inputLayers:Dictionary, inTransition:IAbstractLayerTransitionIn = null, outTransition:IAbstractLayerTransitionOut = null):void
 		{
-			_graphicsEngine.initLayers(inputLayers, inTransition, outTransition);
+			_graphicsEngine.initLayers(container, inputLayers, inTransition, outTransition);
 		}
 		
 		/**
@@ -598,9 +610,9 @@ package bridge
 		 * @param	inTransition
 		 * @param	outTransition
 		 */
-		public function updateLayers(inLayers:Vector.<IAbstractLayer> = null, outLayers:Vector.<IAbstractLayer> = null, inTransition:IAbstractLayerTransitionIn = null, outTransition:IAbstractLayerTransitionOut= null ):void
+		public function updateLayers(container:IAbstractDisplayObjectContainer, inLayers:Vector.<IAbstractLayer> = null, outLayers:Vector.<IAbstractLayer> = null, inTransition:IAbstractLayerTransitionIn = null, outTransition:IAbstractLayerTransitionOut= null ):void
 		{
-			_graphicsEngine.updateLayers(inLayers, outLayers, inTransition, outTransition);
+			_graphicsEngine.updateLayers(container, inLayers, outLayers, inTransition, outTransition);
 		}
 		
 		/**
@@ -609,6 +621,14 @@ package bridge
 		public function get layers():Dictionary
 		{
 			return _graphicsEngine.layers;
+		}
+		
+		/**
+		 * 
+		 */
+		public function set layers(val:Dictionary):void
+		{
+			 _graphicsEngine.layers = val;
 		}
 		
 		/** Swaps the depth of two layers.
@@ -679,6 +699,14 @@ package bridge
 		public function storeXML(name:String, xml:XML):void
 		{
 			_assetsManager.addXml(name, xml)
+		}
+		
+		/**
+		 * 
+		 */
+		public function get currentContainer():IAbstractState
+		{
+			return _graphicsEngine.currentContainer;
 		}
 		
 		/**
