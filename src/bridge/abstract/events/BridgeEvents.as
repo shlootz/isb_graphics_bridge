@@ -3,7 +3,7 @@ package bridge.abstract.events
 	import bridge.abstract.IAbstractDisplayObject;
 	/**
 	 * ...
-	 * @author Eu
+	 * @author Alex Popescu
 	 */
 	/**
 	 * Keeps track of the Bridge events and 

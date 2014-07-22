@@ -115,7 +115,7 @@ package bridge
 	 * 
 	 * <p><b>Request a new Layer</b></p>
 	 * <p>var layersVO:IAbstractEngineLayerVO = _bridgeGraphics.requestLayersVO();</p>
-	 * <p>var newLayer:IAbstractLayer = _bridgeGraphics.requestLayer("Tzeapa", 0, x, true);</p>
+	 * <p>var newLayer:IAbstractLayer = _bridgeGraphics.requestLayer("Layer name", 0, x, true);</p>
 	 * <p>inLayers.push(newLayer);</p>
 	*	<p>_bridgeGraphics.updateLayers(inLayers, null, null, null);</p>
 	* 
@@ -229,10 +229,11 @@ package bridge
 		function requestTexture(name:String):IAbstractTexture
 		
 		/**
-		 * 
+		 * Creates a new label using an IAbstractTextField
 		 * @param	text
 		 * @param	name
 		 * @return
+		 * @see bridge.abstract.IAbstractTextField
 		 */
 		 function requestLabelFromTextfield(text:IAbstractTextField, name:String = ""):IAbstractLabel
 		
@@ -322,14 +323,15 @@ package bridge
 		function requestButton(name:String = ""):IAbstractButton
 		
 		/**
-		 * 
+		 * Creates a new UI element, a IAbstractToggle Button.
+		 * The button has two states: True and False.
 		 * @param	name
 		 * @return
 		 */
 		function requestToggleButton(name:String = ""):IAbstractToggle
 		
 		/**
-		 * 
+		 * Creates an UI element, a Slider
 		 * @param	name
 		 * @param	thumbUpSkin
 		 * @param	thumbDownSkin
@@ -527,7 +529,7 @@ package bridge
 		function storeAtlas(name:String, atlasXml:XML, atlasPng:Class):void
 		
 		/**
-		 * 
+		 * @return IAbstractState
 		 */
 		function get currentContainer():IAbstractState
 		
