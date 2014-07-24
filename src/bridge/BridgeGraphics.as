@@ -435,7 +435,7 @@ package bridge
 		 */
 		public function requestSprite(name:String = ""):IAbstractSprite
 		{
-			return (_graphicsEngine as IEngine).requestSprite() as IAbstractSprite;
+			return (_graphicsEngine as IEngine).requestSprite(name) as IAbstractSprite;
 		}
 		
 		/** 
