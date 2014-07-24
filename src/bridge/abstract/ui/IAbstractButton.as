@@ -102,6 +102,8 @@ package bridge.abstract.ui
 		
 		function set isEnabled (value:Boolean) : void
 		
+		function get isEnabled():Boolean
+		
 		function get isLongPressEnabled () : Boolean
 		
 		function set isLongPressEnabled (value:Boolean) : void
