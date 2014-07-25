@@ -168,6 +168,11 @@ package bridge
 			_space = new space();
 		}
 		
+		public function returnToPool(obj:Object):void
+		{
+			(_graphicsEngine as IEngine).returnToPool(obj);
+		}
+		
 		/** Callback from the engine to mark the succesful init of the engine.
 		 * It will further dispatch a signal Signals.STARLING_READY
 		 */

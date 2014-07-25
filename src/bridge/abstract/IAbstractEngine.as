@@ -146,6 +146,12 @@ package bridge.abstract
 		function initEngine(debugMode:Boolean = false):void
 		
 		/**
+		 * 
+		 * @param	obj
+		 */
+		function returnToPool(obj:Object):void
+		
+		/**
 		 * Engine step
 		 * @param	e
 		 */

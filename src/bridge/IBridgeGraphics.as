@@ -175,6 +175,12 @@ package bridge
 		function get assetsManager():Object
 		
 		/**
+		 * Returns an object of the following type: IAbstractSprite, IAbstractImage, IAbstractMovieClip, IAbstractButton to their respective pools
+		 * @param	obj
+		 */
+		function returnToPool(obj:Object):void
+		
+		/**
 		 * @return Returns the instance of the signals manager.
 		 * 
 		 * @TODO Build an interface for the signals manager.
