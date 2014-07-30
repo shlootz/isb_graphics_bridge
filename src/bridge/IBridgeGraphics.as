@@ -2,6 +2,7 @@ package bridge
 {
 	import bridge.abstract.IAbstractDisplayObjectContainer;
 	import bridge.abstract.IAbstractEngineLayerVO;
+	import bridge.abstract.IAbstractGraphics;
 	import bridge.abstract.IAbstractLayer;
 	import bridge.abstract.IAbstractMovie;
 	import bridge.abstract.transitions.IAbstractStateTransition;
@@ -320,6 +321,13 @@ package bridge
 		 * @see bridge.abstract.IAbstractSprite
 		 */
 		function requestSprite(name:String = ""):IAbstractSprite
+		
+		/**
+		 * 
+		 * @param	target
+		 * @return
+		 */
+		function requestGraphics(target:IAbstractDisplayObjectContainer):IAbstractGraphics
 		
 		/** Build an empty button
 		 * 

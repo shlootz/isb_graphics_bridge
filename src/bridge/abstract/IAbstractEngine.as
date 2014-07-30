@@ -178,6 +178,13 @@ package bridge.abstract
 		
 		/**
 		 * 
+		 * @param	target
+		 * @return
+		 */
+		function requestGraphics(target:IAbstractDisplayObjectContainer):IAbstractGraphics
+		
+		/**
+		 * 
 		 * @return @see bridge.abstract.IAbstractButton
 		 */
 		function requestButton(name:String = ""):IAbstractButton

@@ -7,6 +7,7 @@ package bridge
 	import bridge.abstract.IAbstractDisplayObject;
 	import bridge.abstract.IAbstractDisplayObjectContainer;
 	import bridge.abstract.IAbstractEngineLayerVO;
+	import bridge.abstract.IAbstractGraphics;
 	import bridge.abstract.IAbstractImage;
 	import bridge.abstract.IAbstractLayer;
 	import bridge.abstract.IAbstractMask;
@@ -441,6 +442,11 @@ package bridge
 		public function requestSprite(name:String = ""):IAbstractSprite
 		{
 			return (_graphicsEngine as IEngine).requestSprite(name) as IAbstractSprite;
+		}
+		
+		public function requestGraphics(target:IAbstractDisplayObjectContainer):IAbstractGraphics
+		{
+			return (_graphicsEngine as IEngine).requestGraphics(target) as IAbstractGraphics;
 		}
 		
 		/** 
