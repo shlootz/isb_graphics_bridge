@@ -91,6 +91,14 @@ package bridge.abstract
 		
 		/**
 		 * 
+		 * @param	frames
+		 * @param	fps
+		 * @return
+		 */
+		function requestMovieFromFrames(frames:Vector.<IAbstractImage>, fps:uint = 24):IAbstractMovie
+		
+		/**
+		 * 
 		 * @param	width
 		 * @param	height
 		 * @param	text

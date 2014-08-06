@@ -281,6 +281,14 @@ package bridge
 		function requestMovie(prefix:String, fps:uint = 24):IAbstractMovie
 		
 		/**
+		 * 
+		 * @param	frames
+		 * @param	fps
+		 * @return
+		 */
+		function requestMovieFromFrames(frames:Vector.<IAbstractImage>, fps:uint = 24):IAbstractMovie
+		
+		/**
 		 * Creates a new transition animation
 		 * @return
 		 */

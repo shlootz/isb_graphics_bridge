@@ -351,6 +351,17 @@ package bridge
 		
 		/**
 		 * 
+		 * @param	frames
+		 * @param	fps
+		 * @return
+		 */
+		public function requestMovieFromFrames(frames:Vector.<IAbstractImage>, fps:uint = 24):IAbstractMovie
+		{
+			return (_graphicsEngine as IEngine).requestMovieFromFrames(frames, fps) as IAbstractMovie;
+		}
+		
+		/**
+		 * 
 		 * @return IAbstractLayerTransitionIn
 		 * @see bridge.abstract.transitions.IAbstractLayerTransitionIn
 		 */

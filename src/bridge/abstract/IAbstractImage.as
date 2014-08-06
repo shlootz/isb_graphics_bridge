@@ -1,5 +1,6 @@
 package bridge.abstract 
 {
+	import flash.display.BitmapData;
 	
 	/**
 	 * ...
@@ -28,6 +29,11 @@ package bridge.abstract
 		  * @param Object
 		  */
 		 function set newTexture (value:Object) : void
+		 
+		 /**
+		  * 
+		  */
+		 function set newTextureFromBitmapData(value:BitmapData):void
 		 
 		 /**
 		  * 
