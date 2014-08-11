@@ -37,6 +37,11 @@ package bridge.abstract.ui
 		   * 
 		   */
 		  function set anchor(val:Function):void
+		  
+		  /**
+		   * 
+		   */
+		  function get sliderCurrentValue():Number
 	}
 	
 }

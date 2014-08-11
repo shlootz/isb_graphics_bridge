@@ -499,7 +499,7 @@ package bridge
 														label:IAbstractLabel,
 														name:String = ""):IAbstractSlider
 		{
-			return (_graphicsEngine as IEngine).requestSlider(thumbUpSkin, thumbDownSkin, trackUpSkin, trackDownSkin, backgroundSkin, label)
+			return (_graphicsEngine as IEngine).requestSlider(thumbUpSkin, thumbDownSkin, trackUpSkin, trackDownSkin, backgroundSkin, label, name)
 		}
 		
 		/** Builds an empty state
