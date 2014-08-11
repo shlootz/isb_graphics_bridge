@@ -42,6 +42,7 @@ package bridge.abstract.ui
 		   * 
 		   */
 		  function get sliderCurrentValue():Number
+		  function set sliderCurrentValue(val:Number):void
 	}
 	
 }
