@@ -6,6 +6,7 @@ package bridge
 	import bridge.abstract.IAbstractLayer;
 	import bridge.abstract.IAbstractMovie;
 	import bridge.abstract.transitions.IAbstractStateTransition;
+	import bridge.abstract.ui.IAbstractInputText;
 	import bridge.abstract.ui.IAbstractSlider;
 	import bridge.abstract.ui.IAbstractToggle;
 	import flash.utils.Dictionary;
@@ -400,6 +401,18 @@ package bridge
 		 * @see bridge.abstract.IAbstractTextField
 		 */
 		function requestTextField(width:int, height:int, text:String, fontName:String="Verdana", fontSize:Number=12, color:uint=0, bold:Boolean=false):IAbstractTextField
+		
+		/**
+		 * 
+		 * @param	width
+		 * @param	height
+		 * @param	text
+		 * @param	fontName
+		 * @param	fontSize
+		 * @param	color
+		 * @return
+		 */
+		function requestInputTextField(width:int, height:int, text:String = "", fontName:String = "Verdana", fontSize:Number = 12, color:uint = 0):IAbstractInputText
 		
 		/**
 		 * Makes a request to build a new IAbstractEngineLayerVO

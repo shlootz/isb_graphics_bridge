@@ -1,11 +1,13 @@
 package bridge.abstract.ui 
 {
+	import bridge.abstract.IAbstractDisplayObject;
+	import bridge.abstract.IAbstractSprite;
 	
 	/**
 	 * ...
 	 * @author Alex Popescu
 	 */
-	public interface IAbstractInputText 
+	public interface IAbstractInputText extends IAbstractDisplayObject
 	{
 		
 	}

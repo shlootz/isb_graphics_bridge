@@ -22,6 +22,7 @@ package bridge
 	import bridge.abstract.transitions.IAbstractStateTransition;
 	import bridge.abstract.ui.IAbstractButton;
 	import bridge.abstract.IAbstractTextField;
+	import bridge.abstract.ui.IAbstractInputText;
 	import bridge.abstract.ui.IAbstractLabel;
 	import bridge.abstract.ui.IAbstractSlider;
 	import bridge.abstract.ui.IAbstractToggle;
@@ -528,6 +529,11 @@ package bridge
 		{
 			var t:IAbstractTextField = (_graphicsEngine as IEngine).requestTextField(width, height, text, fontName, fontSize, color);
 			return t;
+		}
+		
+		public function requestInputTextField(width:int, height:int, text:String = "", fontName:String = "Verdana", fontSize:Number = 12, color:uint = 0):IAbstractInputText
+		{
+			return (_graphicsEngine as IEngine).requestInputTextField(width, height, text, fontName, fontSize, color);
 		}
 		
 		/**

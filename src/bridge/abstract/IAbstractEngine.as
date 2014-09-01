@@ -4,6 +4,7 @@ package bridge.abstract
 	import bridge.abstract.filters.IAbstractDropShadowFilter;
 	import bridge.abstract.filters.IAbstractGlowFilter;
 	import bridge.abstract.transitions.IAbstractStateTransition;
+	import bridge.abstract.ui.IAbstractInputText;
 	import bridge.abstract.ui.IAbstractSlider;
 	import bridge.abstract.ui.IAbstractToggle;
 	import flash.events.Event;
@@ -110,6 +111,18 @@ package bridge.abstract
 		 * @see bridge.abstract.IAbstractTextField
 		 */
 		function requestTextField(width:int, height:int, text:String, fontName:String="Verdana", fontSize:Number=12, color:uint=0, bold:Boolean=false):IAbstractTextField
+		
+		/**
+		 * 
+		 * @param	width
+		 * @param	height
+		 * @param	text
+		 * @param	fontName
+		 * @param	fontSize
+		 * @param	color
+		 * @return
+		 */
+		function requestInputTextField(width:int, height:int, text:String = "", fontName:String="Verdana", fontSize:Number=12, color:uint=0):IAbstractInputText
 		
 		/**
 		 * 
