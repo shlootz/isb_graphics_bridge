@@ -9,7 +9,8 @@ package bridge.abstract.ui
 	 */
 	public interface IAbstractInputText extends IAbstractDisplayObject
 	{
-		
+		function get text () : String;
+		function set text (value:String) : void;
 	}
 	
 }

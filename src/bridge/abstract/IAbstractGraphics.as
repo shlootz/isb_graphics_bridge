@@ -26,6 +26,7 @@ package bridge.abstract
 		 function get precisionHitTest():Boolean 
 		 function set precisionHitTestDistance(value:Number):void
 		 function get precisionHitTestDistance() : Number
+		 function beginGradientFill(gradientType:String, colours:Array, alphaValues:Array, ratio:Array):void
 	}
 	
 }

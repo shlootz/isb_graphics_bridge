@@ -9,6 +9,7 @@ package bridge
 	import bridge.abstract.ui.IAbstractInputText;
 	import bridge.abstract.ui.IAbstractSlider;
 	import bridge.abstract.ui.IAbstractToggle;
+	import flash.display.Sprite;
 	import flash.utils.Dictionary;
 	import bridge.abstract.IAbstractImage;
 	import bridge.abstract.IAbstractSprite;
@@ -562,6 +563,11 @@ package bridge
 		 * @param	atlasPng
 		 */
 		function storeAtlas(name:String, atlasXml:XML, atlasPng:Class):void
+		
+		/**
+		 * 
+		 */
+		function get nativeDisplay():Sprite
 		
 		/**
 		 * @return IAbstractState

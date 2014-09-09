@@ -28,6 +28,7 @@ package bridge
 	import bridge.abstract.ui.IAbstractToggle;
 	import flash.display.Bitmap;
 	import flash.display.BitmapData;
+	import flash.display.Sprite;
 	import flash.geom.Point;
 	import flash.media.Sound;
 	import flash.utils.ByteArray;
@@ -768,6 +769,11 @@ package bridge
 		public function storeAtlas(name:String, atlasXml:XML, atlasPng:Class):void
 		{
 			_graphicsEngine.addTextureAtlas(name, atlasXml, atlasPng);
+		}
+		
+		public function get nativeDisplay():Sprite
+		{
+			return _graphicsEngine.nativeDisplay;
 		}
 		
 		/** Pretty much destroys everything

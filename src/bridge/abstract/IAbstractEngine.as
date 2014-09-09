@@ -7,6 +7,7 @@ package bridge.abstract
 	import bridge.abstract.ui.IAbstractInputText;
 	import bridge.abstract.ui.IAbstractSlider;
 	import bridge.abstract.ui.IAbstractToggle;
+	import flash.display.Sprite;
 	import flash.events.Event;
 	import bridge.abstract.transitions.IAbstractLayerTransitionIn;
 	import bridge.abstract.transitions.IAbstractLayerTransitionOut;
@@ -367,6 +368,11 @@ package bridge.abstract
 		 * @see bridge.abstract.IAbstractLayerTransitionOut 
 		 */
 		function updateLayers(container:IAbstractDisplayObjectContainer, inLayers:Vector.<IAbstractLayer> = null, outLayers:Vector.<IAbstractLayer> = null, inTransition:IAbstractLayerTransitionIn = null, outTransition:IAbstractLayerTransitionOut = null):void
+		
+		/**
+		 * 
+		 */
+		function get nativeDisplay():Sprite
 		
 		/**
 		 * 
