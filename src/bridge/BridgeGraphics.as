@@ -22,6 +22,8 @@ package bridge
 	import bridge.abstract.transitions.IAbstractStateTransition;
 	import bridge.abstract.ui.IAbstractButton;
 	import bridge.abstract.IAbstractTextField;
+	import bridge.abstract.ui.IAbstractComboBox;
+	import bridge.abstract.ui.IAbstractComboBoxItemRenderer;
 	import bridge.abstract.ui.IAbstractInputText;
 	import bridge.abstract.ui.IAbstractLabel;
 	import bridge.abstract.ui.IAbstractSlider;
@@ -480,6 +482,20 @@ package bridge
 		public function requestToggleButton(name:String = ""):IAbstractToggle
 		{
 				return(_graphicsEngine as IEngine).requestToggleButton(name) as IAbstractToggle;
+		}
+		
+		/**
+		 * 
+		 * @param	dataProvider
+		 * @param	width
+		 * @param	height
+		 * @param	backgroundImage
+		 * @param	font
+		 * @return
+		 */
+		public function requestComboBox(dataProvider:Vector.<IAbstractComboBoxItemRenderer>, width:Number, height:Number, backgroundImage:IAbstractImage, font:String):IAbstractComboBox
+		{
+			return(_graphicsEngine as IEngine).requestComboBox(dataProvider, width, height, backgroundImage, font) as IAbstractComboBox;
 		}
 		
 		/**

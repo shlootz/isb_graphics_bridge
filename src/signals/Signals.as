@@ -37,6 +37,9 @@ package signals
 		//Some display object has been touched, either by a touch event or mouse event
 		public static const DISPLAY_OBJECT_TOUCHED:String = "GEdisplayObjectTouched"
 		
+		//Generic list item signal
+		public static const LIST_ITEM_TOUCHED:String = "GElistItemTouched";
+		
 	}
 
 }

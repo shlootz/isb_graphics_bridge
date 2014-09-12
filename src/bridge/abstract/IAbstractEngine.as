@@ -4,6 +4,8 @@ package bridge.abstract
 	import bridge.abstract.filters.IAbstractDropShadowFilter;
 	import bridge.abstract.filters.IAbstractGlowFilter;
 	import bridge.abstract.transitions.IAbstractStateTransition;
+	import bridge.abstract.ui.IAbstractComboBox;
+	import bridge.abstract.ui.IAbstractComboBoxItemRenderer;
 	import bridge.abstract.ui.IAbstractInputText;
 	import bridge.abstract.ui.IAbstractSlider;
 	import bridge.abstract.ui.IAbstractToggle;
@@ -217,6 +219,17 @@ package bridge.abstract
 		 * @return
 		 */
 		function requestToggleButton(name:String = ""):IAbstractToggle
+		
+		/**
+		 * 
+		 * @param	dataProvider
+		 * @param	width
+		 * @param	height
+		 * @param	backgroundImage
+		 * @param	font
+		 * @return
+		 */
+		function requestComboBox(dataProvider:Vector.<IAbstractComboBoxItemRenderer>, width:Number, height:Number, backgroundImage:IAbstractImage, font:String):IAbstractComboBox
 		
 		/**
 		 * 

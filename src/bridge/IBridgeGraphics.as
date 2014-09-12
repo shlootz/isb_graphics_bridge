@@ -6,6 +6,8 @@ package bridge
 	import bridge.abstract.IAbstractLayer;
 	import bridge.abstract.IAbstractMovie;
 	import bridge.abstract.transitions.IAbstractStateTransition;
+	import bridge.abstract.ui.IAbstractComboBox;
+	import bridge.abstract.ui.IAbstractComboBoxItemRenderer;
 	import bridge.abstract.ui.IAbstractInputText;
 	import bridge.abstract.ui.IAbstractSlider;
 	import bridge.abstract.ui.IAbstractToggle;
@@ -353,6 +355,17 @@ package bridge
 		 * @return
 		 */
 		function requestToggleButton(name:String = ""):IAbstractToggle
+		
+		/**
+		 * 
+		 * @param	dataProvider
+		 * @param	width
+		 * @param	height
+		 * @param	backgroundImage
+		 * @param	font
+		 * @return
+		 */
+		function requestComboBox(dataProvider:Vector.<IAbstractComboBoxItemRenderer>, width:Number, height:Number, backgroundImage:IAbstractImage, font:String):IAbstractComboBox
 		
 		/**
 		 * Creates an UI element, a Slider
