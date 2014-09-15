@@ -550,7 +550,7 @@ package bridge
 		
 		public function requestInputTextField(width:int, height:int, text:String = "", fontName:String = "Verdana", fontSize:Number = 12, color:uint = 0):IAbstractInputText
 		{
-			return (_graphicsEngine as IEngine).requestInputTextField(width, height, text, fontName, fontSize, color);
+			return (_graphicsEngine as IEngine).requestInputTextField(_signalsManager, width, height, text, fontName, fontSize, color);
 		}
 		
 		/**

@@ -125,7 +125,7 @@ package bridge.abstract
 		 * @param	color
 		 * @return
 		 */
-		function requestInputTextField(width:int, height:int, text:String = "", fontName:String="Verdana", fontSize:Number=12, color:uint=0):IAbstractInputText
+		function requestInputTextField(signalsManager:Object, width:int, height:int, text:String = "", fontName:String="Verdana", fontSize:Number=12, color:uint=0):IAbstractInputText
 		
 		/**
 		 * 

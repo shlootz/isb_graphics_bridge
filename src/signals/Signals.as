@@ -40,6 +40,9 @@ package signals
 		//Generic list item signal
 		public static const LIST_ITEM_TOUCHED:String = "GElistItemTouched";
 		
+		//Generic list item signal
+		public static const TEXT_INPUT_CHANGED:String = "GETextInputChanged";
+		
 	}
 
 }
