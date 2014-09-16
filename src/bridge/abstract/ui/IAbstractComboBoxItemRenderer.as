@@ -16,6 +16,10 @@ package bridge.abstract.ui
 		
 		function set thumbnail(value:IAbstractImage):void 
 		
+		function get data():Object 
+		
+		function set data(value:Object):void 
+		
 	}
 	
 }

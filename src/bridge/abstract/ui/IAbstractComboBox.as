@@ -9,6 +9,12 @@ package bridge.abstract.ui
 	public interface IAbstractComboBox extends IAbstractSprite
 	{
 		function get currentSelection():String
+		
+		function addItem(item:IAbstractComboBoxItemRenderer):void
+		
+		function removeItem(item:IAbstractComboBoxItemRenderer):void
+		
+		function clearList():void
 	}
 	
 }
