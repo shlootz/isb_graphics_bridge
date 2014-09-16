@@ -11,6 +11,7 @@ package bridge.abstract.ui
 	{
 		function get text () : String;
 		function set text (value:String) : void;
+		function set restriction(val:String):void
 	}
 	
 }
