@@ -10,6 +10,8 @@ package bridge.abstract.ui
 	{
 		function get currentSelection():String
 		
+		function get currentSelectedIData():Object
+		
 		function addItem(item:IAbstractComboBoxItemRenderer):void
 		
 		function removeItem(item:IAbstractComboBoxItemRenderer):void
