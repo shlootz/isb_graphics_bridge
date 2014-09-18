@@ -12,6 +12,7 @@ package bridge
 	import bridge.abstract.ui.IAbstractSlider;
 	import bridge.abstract.ui.IAbstractToggle;
 	import flash.display.Sprite;
+	import flash.geom.Rectangle;
 	import flash.utils.Dictionary;
 	import bridge.abstract.IAbstractImage;
 	import bridge.abstract.IAbstractSprite;
@@ -534,6 +535,11 @@ package bridge
 		 * @param	vo
 		 */
 		function addGlowFilter (target:IAbstractDisplayObject, vo:IAbstractGlowFilter) : void;
+		
+		/**
+		 * 
+		 */
+		function requestScreenshot(rect:Rectangle, scale:Number=1.0):BitmapData
 		
 		/**
 		 * Saves a byte array in Assets Manager

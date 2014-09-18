@@ -32,6 +32,7 @@ package bridge
 	import flash.display.BitmapData;
 	import flash.display.Sprite;
 	import flash.geom.Point;
+	import flash.geom.Rectangle;
 	import flash.media.Sound;
 	import flash.utils.ByteArray;
 	import flash.utils.Dictionary;
@@ -651,6 +652,17 @@ package bridge
 			  	_graphicsEngine.addBlurFilter(target, vo);
 		 }
 		
+		 /**
+		  * 
+		  * @param	rect
+		  * @param	scale
+		  * @return
+		  */
+		public  function requestScreenshot(rect:Rectangle, scale:Number=1.0):BitmapData
+		{
+				return (_graphicsEngine as IEngine).requestScreenshot(rect, scale);
+		}
+		 
 		/**
 		 * 
 		 * @param	inputLayers

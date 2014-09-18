@@ -16,6 +16,7 @@ package bridge.abstract
 	import bridge.abstract.transitions.IAbstractStateTransition;
 	import bridge.abstract.ui.IAbstractButton;
 	import bridge.abstract.ui.IAbstractLabel;
+	import flash.geom.Rectangle;
 	import flash.utils.Dictionary
 	import flash.display.BitmapData;
 	import flash.display.Bitmap;
@@ -342,6 +343,14 @@ package bridge.abstract
 		 * @return
 		 */
 		function requestBlurFilter():IAbstractBlurFilter
+		
+		/**
+		 * 
+		 * @param	rect
+		 * @param	scale
+		 * @return
+		 */
+		function requestScreenshot(rect:Rectangle, scale:Number=1.0):BitmapData
 		
 		/**
 		 * 
