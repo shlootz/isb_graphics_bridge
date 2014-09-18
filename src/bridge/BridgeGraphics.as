@@ -132,6 +132,8 @@ package bridge
 		
 		private var _pools:Dictionary = new Dictionary(true);
 		
+		private var _bitmapDataFallBack:BitmapData = new BitmapData(100, 100, true, 0x000000);
+		
 		/** Creates a new BridgeGraphics instance
 		 * 
 		 * @param	graphicsEngineClass		Entry Point of the actual graphics engine.
@@ -314,7 +316,20 @@ package bridge
 		 */
 		public function requestImage(name:String):IAbstractImage
 		{
-			return (_graphicsEngine as IEngine).requestImage(_assetsManager.getTexture(name), name) as IAbstractImage;
+			var textureObject:Object = (_assetsManager.getTexture(name));
+			var img:IAbstractImage;
+			
+			if (textureObject != null)
+			{
+				img =  (_graphicsEngine as IEngine).requestImage(textureObject, name) as IAbstractImage;
+			}
+			else
+			{
+				trace("WARNING :: BridgeGraphics :: requestImage :: name: " + name+" cannot be found -> fallback to transparent bitmapData");
+				img = (_graphicsEngine as IEngine).requestImageFromBitmapData(_bitmapDataFallBack);
+			}
+			
+			return img;
 		}
 		
 		/**
