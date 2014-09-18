@@ -334,6 +334,16 @@ package bridge
 		
 		/**
 		 * 
+		 * @param	image
+		 * @param	color
+		 */
+		 public function colorizeImage(image:IAbstractImage, color:uint):void
+		 {
+			 (_graphicsEngine as IEngine).colorizeImage(image, color);
+		 }
+		
+		/**
+		 * 
 		 * @param	scrollImage
 		 * @param	width
 		 * @param	height

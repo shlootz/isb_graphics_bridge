@@ -259,6 +259,13 @@ package bridge
 		
 		/**
 		 * 
+		 * @param	image
+		 * @param	color
+		 */
+		 function colorizeImage(image:IAbstractImage, color:uint):void
+		
+		/**
+		 * 
 		 * @param	scrollImage
 		 * @param	width
 		 * @param	height
