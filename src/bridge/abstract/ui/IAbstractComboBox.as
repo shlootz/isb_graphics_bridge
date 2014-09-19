@@ -12,6 +12,8 @@ package bridge.abstract.ui
 		
 		function get currentSelectedIData():Object
 		
+		function get currentSelectedIndex():uint
+		
 		function addItem(item:IAbstractComboBoxItemRenderer):void
 		
 		function removeItem(item:IAbstractComboBoxItemRenderer):void

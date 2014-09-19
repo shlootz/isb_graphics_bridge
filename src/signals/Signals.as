@@ -38,6 +38,7 @@ package signals
 		public static const DISPLAY_OBJECT_TOUCHED:String = "GEdisplayObjectTouched"
 		
 		//Generic list item signal
+		public static const LIST_ITEM_TOUCHED_INTERNAL:String = "GElistItemTouchedInternal";
 		public static const LIST_ITEM_TOUCHED:String = "GElistItemTouched";
 		
 		//Generic list item signal
