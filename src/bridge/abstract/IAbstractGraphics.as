@@ -1,5 +1,6 @@
 package bridge.abstract 
 {
+	import flash.display.Bitmap;
 	
 	/**
 	 * ...
@@ -27,6 +28,10 @@ package bridge.abstract
 		 function set precisionHitTestDistance(value:Number):void
 		 function get precisionHitTestDistance() : Number
 		 function beginGradientFill(gradientType:String, colours:Array, alphaValues:Array, ratio:Array):void
+		 function drawLineTexture(thickness:Number, texture:Bitmap):void
+		 function updateLineTexture(newTexture:Bitmap):void
+		 function animateTexture(uSpeed:Number, vSpeed:Number, thickness:Number, texture:Bitmap):void
+		 function updateAnimateTexture(newTexture:Bitmap):void
 	}
 	
 }
