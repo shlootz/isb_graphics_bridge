@@ -93,7 +93,7 @@ package bridge.abstract
 		 */
 		public function growPool(newNumber:uint):void
 		{
-			var i:uint = _size;
+			var i:uint = newNumber;
 			
 			  while ( --i > -1 ) 
 			 {
@@ -149,7 +149,7 @@ package bridge.abstract
 				growPool(10);
 			}
 			
-			newObj = _pool.shift();
+			newObj = _pool.pop();
 			
 			return newObj;
 		}
