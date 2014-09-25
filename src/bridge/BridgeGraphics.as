@@ -132,7 +132,7 @@ package bridge
 		
 		private var _pools:Dictionary = new Dictionary(true);
 		
-		private var _bitmapDataFallBack:BitmapData = new BitmapData(100, 100, true, 0x000000);
+		private var _bitmapDataFallBack:BitmapData = new BitmapData(50, 50, true, 0x000000);
 		
 		/** Creates a new BridgeGraphics instance
 		 * 
@@ -327,6 +327,7 @@ package bridge
 			{
 				trace("WARNING :: BridgeGraphics :: requestImage :: name: " + name+" cannot be found -> fallback to transparent bitmapData");
 				img = (_graphicsEngine as IEngine).requestImageFromBitmapData(_bitmapDataFallBack);
+				img.name = "imgFallback" + Math.random() * 999999;
 			}
 			
 			return img;

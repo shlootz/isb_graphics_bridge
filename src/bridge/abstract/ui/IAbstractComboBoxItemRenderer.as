@@ -12,10 +12,6 @@ package bridge.abstract.ui
 		
 		function set text(value:String):void 
 		
-		function get thumbnail():IAbstractImage 
-		
-		function set thumbnail(value:IAbstractImage):void 
-		
 		function get data():Object 
 		
 		function set data(value:Object):void 
