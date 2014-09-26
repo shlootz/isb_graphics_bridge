@@ -1,6 +1,7 @@
 package bridge.abstract.ui 
 {
 	import bridge.abstract.IAbstractDisplayObjectContainer;
+	import bridge.abstract.IAbstractTextField;
 	
 	/**
 	 * ...
@@ -12,6 +13,8 @@ package bridge.abstract.ui
 	public interface IAbstractLabel extends IAbstractDisplayObjectContainer
 	{
 		 function updateLabel(text:String):void
+		 
+		 function get textField():IAbstractTextField
 	}
 	
 }

@@ -24,6 +24,11 @@ package signals
 		
 		//Generic button
 		public static const GENERIC_BUTTON_PRESSED:String = "GEbuttonPressed"
+		public static const GENERIC_BUTTON_OVER:String = "GEbuttonOver"
+		public static const GENERIC_BUTTON_ENDED:String = "GEbuttonEnded"
+		
+		//Stage
+		public static const MOUSE_WHEEL:String = "EMouseWheel"
 		
 		//Generic slider changed
 		public static const GENERIC_SLIDER_CHANGE:String = "GEsliderChanged"
