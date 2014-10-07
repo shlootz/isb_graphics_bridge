@@ -262,6 +262,8 @@ package bridge.abstract.ui
 		
 		//function refreshMaxLabelWidth_ (forMeasurement:Boolean) : void
 		
+		function isHit (localPoint:Point, forTouch:Boolean=false) : Boolean;
+		
 		function refreshSkin_ () : void
 		
 		function scaleSkin_ () : void

@@ -26,6 +26,7 @@ package signals
 		public static const GENERIC_BUTTON_PRESSED:String = "GEbuttonPressed"
 		public static const GENERIC_BUTTON_OVER:String = "GEbuttonOver"
 		public static const GENERIC_BUTTON_ENDED:String = "GEbuttonEnded"
+		public static const GENERIC_BUTTON_OUT:String = "GEbuttonOut"
 		
 		//Stage
 		public static const MOUSE_WHEEL:String = "EMouseWheel"
