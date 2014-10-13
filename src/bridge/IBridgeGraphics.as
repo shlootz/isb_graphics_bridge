@@ -1,5 +1,6 @@
 package bridge 
 {
+	import bridge.abstract.effects.IAbstractParticleSystem;
 	import bridge.abstract.IAbstractDisplayObjectContainer;
 	import bridge.abstract.IAbstractEngineLayerVO;
 	import bridge.abstract.IAbstractGraphics;
@@ -599,6 +600,14 @@ package bridge
 		 * @return IAbstractState
 		 */
 		function get currentContainer():IAbstractState
+		
+		/**
+		 * 
+		 * @param	configXML
+		 * @param	imageSource
+		 * @return
+		 */
+		 function requestParticleSystem(configXML:XML, imageSource:IAbstractImage):IAbstractParticleSystem
 		
 		/**
 		 * 

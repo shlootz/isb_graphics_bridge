@@ -1,5 +1,6 @@
 package bridge.abstract 
 {
+	import bridge.abstract.effects.IAbstractParticleSystem;
 	import bridge.abstract.filters.IAbstractBlurFilter;
 	import bridge.abstract.filters.IAbstractDropShadowFilter;
 	import bridge.abstract.filters.IAbstractGlowFilter;
@@ -16,6 +17,7 @@ package bridge.abstract
 	import bridge.abstract.transitions.IAbstractStateTransition;
 	import bridge.abstract.ui.IAbstractButton;
 	import bridge.abstract.ui.IAbstractLabel;
+	import flash.geom.Point;
 	import flash.geom.Rectangle;
 	import flash.utils.Dictionary
 	import flash.display.BitmapData;
@@ -414,6 +416,22 @@ package bridge.abstract
 		 * @param	atlasPng
 		 */
 		function addTextureAtlas(name:String, atlasXml:XML, atlasPng:Class):void
+		
+		/**
+		 * 
+		 * @param	localPoint
+		 * @param	forTouch
+		 * @return
+		 */
+		function isHit (localPoint:Point, forTouch:Boolean = false) : Boolean
+		
+		/**
+		 * 
+		 * @param	configXML
+		 * @param	imageSource
+		 * @return
+		 */
+		 function requestParticleSystem(configXML:XML, imageSource:IAbstractImage):IAbstractParticleSystem
 		
 	}
 	

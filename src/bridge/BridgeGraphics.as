@@ -1,5 +1,6 @@
 package bridge 
 {
+	import bridge.abstract.effects.IAbstractParticleSystem;
 	import bridge.abstract.filters.IAbstractBlurFilter;
 	import bridge.abstract.filters.IAbstractDropShadowFilter;
 	import bridge.abstract.filters.IAbstractGlowFilter;
@@ -862,6 +863,17 @@ package bridge
 			(_graphicsEngine as IEngine).cleanUp();
 			_graphicsEngine = null;
 		}
+		
+		/**
+	 * 
+	 * @param	configXML
+	 * @param	imageSource
+	 * @return
+	 */
+	public function requestParticleSystem(configXML:XML, imageSource:IAbstractImage):IAbstractParticleSystem
+	 {
+		 return (_graphicsEngine as IEngine).requestParticleSystem(configXML, imageSource);
+	 }
 	}
 
 }
