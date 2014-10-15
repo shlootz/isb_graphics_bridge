@@ -49,6 +49,8 @@ package signals
 		
 		//Generic list item signal
 		public static const TEXT_INPUT_CHANGED:String = "GETextInputChanged";
+		public static const TEXT_INPUT_FOCUS_IN:String = "GETextInputFocusIn";
+		public static const TEXT_INPUT_FOCUS_OUT:String = "GETextInputFocusOut";
 		
 	}
 
