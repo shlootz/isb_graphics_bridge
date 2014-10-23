@@ -47,6 +47,12 @@ package bridge.abstract
 		 */
 		function addVideoPath(path:String):void
 		
+		/**
+		 * 
+		 * @param	stream
+		 */
+		function addVideoStream(stream:NetStream):void
+		
 		/** Pauses the Video EventListeners (drawing/uploading) but the NetStream will not be affected.
 		 *  @see start()
 		 *  @see stop()
