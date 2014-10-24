@@ -255,7 +255,7 @@ package bridge
 		 * 
 		 * @TODO Build an interface for the juggler
 		 */
-		public function get juggler():Object
+		public function get juggler_():Object
 		{
 			return _juggler;
 		}
@@ -267,7 +267,7 @@ package bridge
 		 */
 		public function get defaultJuggler():Object
 		{
-			return (_graphicsEngine as IEngine).juggler;
+			return (_graphicsEngine as IEngine).juggler_;
 		}
 		
 		/**
@@ -286,7 +286,7 @@ package bridge
 		 */
 		public function set juggler(val:Object):void
 		{
-			_juggler = juggler;
+			_juggler = juggler_;
 		}
 		
 		/** Set a custom space
@@ -315,7 +315,7 @@ package bridge
 		 * @return Returns an IAbstractImage
 		 * @see bridge.abstract.IAbstractImage
 		 */
-		public function requestImage(name:String):IAbstractImage
+		public function requestImage(name:String, scaleFromAtlas:Boolean = true):IAbstractImage
 		{
 			var textureObject:Object = (_assetsManager.getTexture(name));
 			var img:IAbstractImage;
@@ -323,6 +323,10 @@ package bridge
 			if (textureObject != null)
 			{
 				img =  (_graphicsEngine as IEngine).requestImage(textureObject, name) as IAbstractImage;
+				if (scaleFromAtlas)
+				{
+					img.scaleX = img.scaleY = searchScale(name);
+				}
 			}
 			else
 			{
@@ -332,6 +336,40 @@ package bridge
 			}
 			
 			return img;
+		}
+		
+		/**
+		 * 
+		 * @param	id
+		 * @return
+		 */
+		private function searchScale(id:String):Number
+		{
+			var autoScale:Number = 1;
+			var elementsList:XML;
+			var xl:XMLList ;
+			
+			var spriteSheetsNames:Vector.<String> = _assetsManager.getXmlNames();
+			
+			for (var i:uint = 0; i < spriteSheetsNames.length; i++ )
+			{
+				elementsList = _assetsManager.getXml(spriteSheetsNames[i]);
+				if (elementsList.name() == "TextureAtlas")
+				{
+					xl = elementsList..*.(@name == String(id));
+					if (xl.toXMLString() != "")
+					{
+						 autoScale = xl.attribute("scale");
+					}
+				}
+			}
+			
+			if (autoScale == 0)
+			{
+				autoScale = 1;
+			}
+			
+			return autoScale;
 		}
 		
 		/**

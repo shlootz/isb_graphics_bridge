@@ -211,7 +211,7 @@ package bridge
 		 * 
 		 * @TODO Build an interface for the juggler
 		 */
-		function get juggler():Object
+		function get juggler_():Object
 		
 		/**
 		 * @return Returns the class for the default juggler
@@ -256,7 +256,7 @@ package bridge
 		 * @return Returns an IAbstractImage
 		 * @see bridge.abstract.IAbstractImage
 		 */
-		function requestImage(name:String):IAbstractImage
+		function requestImage(name:String, scaleFromAtlas:Boolean = false):IAbstractImage
 		
 		/**
 		 * 

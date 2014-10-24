@@ -158,7 +158,7 @@ package bridge.abstract
 		 * @TODO build a abstractization for Juggler
 		 * @return Returns the engine Juggler
 		 */
-		function get juggler():Object
+		function get juggler_():Object
 		
 		/**
 		 * Returns the instance of the default stage used by the engine.
