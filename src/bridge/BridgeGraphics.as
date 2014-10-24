@@ -861,7 +861,7 @@ package bridge
 		 */
 		public function storeAtlas(name:String, atlasXml:XML, atlasPng:Class):void
 		{
-			_graphicsEngine.addXml(atlasXml);
+			_assetsManager.addXml(name, atlasXml);
 			_graphicsEngine.addTextureAtlas(name, atlasXml, atlasPng);
 		}
 		
