@@ -557,6 +557,13 @@ package bridge
 		function storeByteArray(name:String, byteArray:ByteArray):void
 		
 		/**
+		 * 
+		 * @param	name
+		 * @param	xml
+		 */
+		function storeXML(name:String, xml:XML):void
+		
+		/**
 		 * Saves an object in Assets Manager
 		 * @param	name
 		 * @param	object
