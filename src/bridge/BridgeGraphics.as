@@ -426,6 +426,10 @@ package bridge
 			results.push(searchScale(prefix + "_" + "1"));
 			results.push(searchScale(prefix + "" + "0"));
 			results.push(searchScale(prefix + "" + "1"));
+			results.push(searchScale(prefix + "" + "00"));
+			results.push(searchScale(prefix + "" + "01"));
+			results.push(searchScale(prefix + "_" + "00"));
+			results.push(searchScale(prefix + "_" + "01"));
 			
 			for (var i:uint = 0; i < results.length; i++ )
 			{
