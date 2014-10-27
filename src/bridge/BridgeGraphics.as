@@ -416,7 +416,28 @@ package bridge
 		 */
 		public function requestMovie(prefix:String, fps:uint = 24):IAbstractMovie
 		{
-			return (_graphicsEngine as IEngine).requestMovie(prefix, fps) as IAbstractMovie;
+			var mc:IAbstractMovie = (_graphicsEngine as IEngine).requestMovie(prefix, fps) as IAbstractMovie;
+			var autoScale:Number = 1;
+			var results:Vector.<Number> = new Vector.<Number>;
+			
+			results.push(searchScale(prefix + "-" + "0"));
+			results.push(searchScale(prefix + "-" + "1"));
+			results.push(searchScale(prefix + "_" + "0"));
+			results.push(searchScale(prefix + "_" + "1"));
+			results.push(searchScale(prefix + "" + "0"));
+			results.push(searchScale(prefix + "" + "1"));
+			
+			for (var i:uint = 0; i < results.length; i++ )
+			{
+				if (results[i] != 1)
+				{
+					autoScale = results[i];
+					break;
+				}
+			}
+			
+			mc.scaleX = mc.scaleY = autoScale;
+			return mc;
 		}
 		
 		/**
