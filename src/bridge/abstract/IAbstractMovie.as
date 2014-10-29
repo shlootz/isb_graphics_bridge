@@ -163,6 +163,24 @@ package bridge.abstract
 		function setTextureToFrame(frameID:uint, texture:IAbstractTexture):void
 		
 		/**
+		 * 
+		 * @param	frame
+		 */
+		function gotoAndStop(frame:int):void
+		
+		/**
+		 * 
+		 * @param	frame
+		 */
+		 function gotoAndPlay(frame:int):void
+		 
+		 /**
+		  * 
+		  */
+		 function get frame():Number 
+		 function set frame(value:Number):void 
+
+		/**
 		 * Stops playback, resetting "currentFrame" to zero.
 		 */
 		function stop () : void;
