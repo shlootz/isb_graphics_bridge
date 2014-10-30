@@ -759,7 +759,7 @@ package bridge
 		  */
 		 public function addNewsPaperFilter(target:IAbstractDisplayObject, size:int, scale:int, angleInRadians:Number):void
 		 {
-			  _graphicsEngine.addPixelationFilter(target, size, scale, angleInRadians);
+			  _graphicsEngine.addNewsPaperFilter(target, size, scale, angleInRadians);
 		 }
 		
 		 /**
