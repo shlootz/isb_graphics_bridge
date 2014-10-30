@@ -1,6 +1,7 @@
 package bridge.abstract.ui 
 {
 	import bridge.abstract.IAbstractDisplayObjectContainer;
+	import bridge.abstract.IAbstractSprite;
 	import bridge.abstract.IAbstractTextField;
 	
 	/**
@@ -10,7 +11,7 @@ package bridge.abstract.ui
 	/**
 	 * Creates a label using a String. Main purpose is usage within buttons.
 	 */
-	public interface IAbstractLabel extends IAbstractDisplayObjectContainer
+	public interface IAbstractLabel extends IAbstractSprite
 	{
 		 function updateLabel(text:String):void
 		 

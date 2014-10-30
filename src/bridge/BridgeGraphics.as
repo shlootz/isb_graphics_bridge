@@ -741,6 +741,26 @@ package bridge
 		 {
 			  	_graphicsEngine.addBlurFilter(target, vo);
 		 }
+		 
+		  /**
+		  * 
+		  * @param	target
+		  * @param	pixelSize
+		  */
+		 public function addPixelationFilter(target:IAbstractDisplayObject, pixelSize:int):void
+		 {
+			 _graphicsEngine.addPixelationFilter(target, pixelSize);
+		 }
+		 
+		  /**
+		  * 
+		  * @param	target
+		  * @param	pixelSize
+		  */
+		 public function addNewsPaperFilter(target:IAbstractDisplayObject, size:int, scale:int, angleInRadians:Number):void
+		 {
+			  _graphicsEngine.addPixelationFilter(target, size, scale, angleInRadians);
+		 }
 		
 		 /**
 		  * 

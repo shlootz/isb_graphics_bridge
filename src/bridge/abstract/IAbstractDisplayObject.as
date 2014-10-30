@@ -67,10 +67,12 @@ package bridge.abstract
 		 * 
 		 */
 		function set rotation(val:Number):void
+		
 		/**
 		 * 
 		 */
 		function get rotation():Number
+		
 		/**
 		 * 
 		 */

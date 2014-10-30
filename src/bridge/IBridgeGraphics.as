@@ -533,6 +533,22 @@ package bridge
 		/**
 		 * 
 		 * @param	target
+		 * @param	pixelSize
+		 */
+		function addPixelationFilter(target:IAbstractDisplayObject, pixelSize:int):void
+		
+		/**
+		 * 
+		 * @param	target
+		 * @param	size
+		 * @param	scale
+		 * @param	angleInRadians
+		 */
+		function addNewsPaperFilter(target:IAbstractDisplayObject, size:int, scale:int, angleInRadians:Number):void
+		
+		/**
+		 * 
+		 * @param	target
 		 * @param	vo
 		 */
 		function addDropShadowFilter (target:IAbstractDisplayObject, vo:IAbstractDropShadowFilter) : void;

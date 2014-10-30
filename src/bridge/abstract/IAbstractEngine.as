@@ -177,7 +177,7 @@ package bridge.abstract
 		 * Initializes the engine.
 		 * <b>Without propor init, the graphics will not be displayed</b>
 		 */
-		function initEngine(debugMode:Boolean = false):void
+		function initEngine():void
 		
 		/**
 		 * 
@@ -381,6 +381,22 @@ package bridge.abstract
 		 * @param	vo
 		 */
 		function addBlurFilter(target:IAbstractDisplayObject, vo:IAbstractBlurFilter):void
+		
+		/**
+		 * 
+		 * @param	target
+		 * @param	pixelSize
+		 */
+		function addPixelationFilter(target:IAbstractDisplayObject, pixelSize:int):void
+		
+		/**
+		 * 
+		 * @param	target
+		 * @param	size
+		 * @param	scale
+		 * @param	angleInRadians
+		 */
+		function addNewsPaperFilter(target:IAbstractDisplayObject, size:int, scale:int, angleInRadians:Number):void
 		
 		/**
 		 * 
