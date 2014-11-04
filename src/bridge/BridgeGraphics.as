@@ -958,6 +958,18 @@ package bridge
 	 {
 		 return (_graphicsEngine as IEngine).requestParticleSystem(configXML, imageSource);
 	 }
+	 
+	 /**
+	  * 
+	  * @param	configXML
+	  * @param	imageSource
+	  * @param	atlasXML
+	  * @return
+	  */
+	public function requestAdvancedParticleSystem(configXML:XML, imageSource:IAbstractImage, atlasXML:XML = null):IAbstractParticleSystem
+	{
+		return (_graphicsEngine as IEngine).requestAdvancedParticleSystem(configXML, imageSource, atlasXML);
+	}
 	}
 
 }

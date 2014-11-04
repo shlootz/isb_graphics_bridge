@@ -631,6 +631,15 @@ package bridge
 		 * @return
 		 */
 		 function requestParticleSystem(configXML:XML, imageSource:IAbstractImage):IAbstractParticleSystem
+		 
+		 /**
+		  * 
+		  * @param	configXML
+		  * @param	imageSource
+		  * @param	atlasXML
+		  * @return
+		  */
+		 function requestAdvancedParticleSystem(configXML:XML, imageSource:IAbstractImage, atlasXML:XML=null):IAbstractParticleSystem
 		
 		/**
 		 * 
