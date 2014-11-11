@@ -52,6 +52,8 @@ package signals
 		public static const TEXT_INPUT_FOCUS_IN:String = "GETextInputFocusIn";
 		public static const TEXT_INPUT_FOCUS_OUT:String = "GETextInputFocusOut";
 		
+		//Particles signal
+		public static const PARTICLE_SYSTEM_COMPLETED:String = "GEParticleSystemCompleted";
 	}
 
 }
