@@ -84,6 +84,12 @@ package bridge.abstract
 		 * @see flash.net.NetStream
 		 */
 		function get stream():NetStream
+		
+		/**
+		 * 
+		 */
+		 function get loop():Boolean 
+		 function set loop(value:Boolean):void 
 	}
 	
 }

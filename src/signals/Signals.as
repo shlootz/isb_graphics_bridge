@@ -54,6 +54,9 @@ package signals
 		
 		//Particles signal
 		public static const PARTICLE_SYSTEM_COMPLETED:String = "GEParticleSystemCompleted";
+		
+		//FLV
+		public static const FLV_MOVIE_ENDED:String = "GEFLVMovieEnded";
 	}
 
 }
