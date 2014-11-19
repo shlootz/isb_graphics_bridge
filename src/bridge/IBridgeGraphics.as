@@ -291,7 +291,7 @@ package bridge
 		 * @return Returns an IAbstractMovie
 		 * @see bridge.abstract.IAbstractMovie
 		 */
-		function requestMovie(prefix:String, fps:uint = 24):IAbstractMovie
+		function requestMovie(prefix:String, fps:uint = 24, scaleFromAtlas:Boolean = false):IAbstractMovie
 		
 		/**
 		 * 
