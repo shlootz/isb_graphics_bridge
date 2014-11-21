@@ -417,33 +417,36 @@ package bridge
 		public function requestMovie(prefix:String, fps:uint = 24, scaleFromAtlas:Boolean = false):IAbstractMovie
 		{
 			var mc:IAbstractMovie = (_graphicsEngine as IEngine).requestMovie(prefix, fps) as IAbstractMovie;
-			var autoScale:Number = 1;
-			var results:Vector.<Number> = new Vector.<Number>;
-			
-			if (scaleFromAtlas)
+			if (mc)
 			{
-				results.push(searchScale(prefix + "-" + "0"));
-				results.push(searchScale(prefix + "-" + "1"));
-				results.push(searchScale(prefix + "_" + "0"));
-				results.push(searchScale(prefix + "_" + "1"));
-				results.push(searchScale(prefix + "" + "0"));
-				results.push(searchScale(prefix + "" + "1"));
-				results.push(searchScale(prefix + "" + "00"));
-				results.push(searchScale(prefix + "" + "01"));
-				results.push(searchScale(prefix + "_" + "00"));
-				results.push(searchScale(prefix + "_" + "01"));
+				var autoScale:Number = 1;
+				var results:Vector.<Number> = new Vector.<Number>;
 				
-				for (var i:uint = 0; i < results.length; i++ )
+				if (scaleFromAtlas)
 				{
-					if (results[i] != 1)
+					results.push(searchScale(prefix + "-" + "0"));
+					results.push(searchScale(prefix + "-" + "1"));
+					results.push(searchScale(prefix + "_" + "0"));
+					results.push(searchScale(prefix + "_" + "1"));
+					results.push(searchScale(prefix + "" + "0"));
+					results.push(searchScale(prefix + "" + "1"));
+					results.push(searchScale(prefix + "" + "00"));
+					results.push(searchScale(prefix + "" + "01"));
+					results.push(searchScale(prefix + "_" + "00"));
+					results.push(searchScale(prefix + "_" + "01"));
+					
+					for (var i:uint = 0; i < results.length; i++ )
 					{
-						autoScale = results[i];
-						break;
+						if (results[i] != 1)
+						{
+							autoScale = results[i];
+							break;
+						}
 					}
 				}
+				
+				mc.scaleX = mc.scaleY = autoScale;
 			}
-			
-			mc.scaleX = mc.scaleY = autoScale;
 			return mc;
 		}
 		
