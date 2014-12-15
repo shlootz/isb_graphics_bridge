@@ -400,6 +400,12 @@ package bridge.abstract
 		
 		/**
 		 * 
+		 * @param	target
+		 */
+		 function clearFilter(target:IAbstractDisplayObject):void
+		
+		/**
+		 * 
 		 * @param	layer1
 		 * @param	layer2
 		 * @see bridge.abstract.IAbstractLayer 

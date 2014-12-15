@@ -86,7 +86,7 @@ package bridge.abstract
 		 * @param	sound
 		 * @param	duration
 		 */
-		function addNewFrame(texture:IAbstractTexture, sound:Sound = null, duration:Number = -1):void
+		function addNewFrame(image:IAbstractImage, sound:Sound = null, duration:Number = -1):void
 		
 		/**
 		 * Adds a frame at a certain index, optionally with a sound and a custom duration.
@@ -95,7 +95,7 @@ package bridge.abstract
 		 * @param	sound
 		 * @param	duration
 		 */
-		function addNewFrameAt(frameID:uint, texture:IAbstractTexture, sound:Sound = null, duration:Number = -1):void
+		function addNewFrameAt(frameID:uint, image:IAbstractImage, sound:Sound = null, duration:Number = -1):void
 		
 		/**
 		 * Advance the time by a number of seconds.
@@ -122,7 +122,7 @@ package bridge.abstract
 		 * @param	frameID
 		 * @return IAbstractTexture
 		 */
-		function getTextureFromFrame(frameID:uint):IAbstractTexture
+		function getTextureFromFrame(frameID:uint):IAbstractImage
 		
 		/**
 		 * Pauses playback.
@@ -160,7 +160,7 @@ package bridge.abstract
 		 * @param	frameID
 		 * @param	texture
 		 */
-		function setTextureToFrame(frameID:uint, texture:IAbstractTexture):void
+		function setTextureToFrame(frameID:uint, image:IAbstractImage):void
 		
 		/**
 		 * 

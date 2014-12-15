@@ -463,6 +463,12 @@ package bridge
 		function requestBlurFilter():IAbstractBlurFilter
 		
 		/**
+		 * 
+		 * @param	target
+		 */
+		function clearFilter(target:IAbstractDisplayObject):void
+		
+		/**
 		 * Returns a store XML from the Assets Manager
 		 * @param	name
 		 * @return XML

@@ -770,6 +770,15 @@ package bridge
 		
 		 /**
 		  * 
+		  * @param	target
+		  */
+		 public function clearFilter(target:IAbstractDisplayObject):void
+		 {
+			 _graphicsEngine.clearFilter(target);
+		 }
+		 
+		 /**
+		  * 
 		  * @param	rect
 		  * @param	scale
 		  * @return
