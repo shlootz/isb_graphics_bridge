@@ -93,6 +93,8 @@ package bridge.abstract
 		 */
 		public function growPool(newNumber:uint):void
 		{
+			trace("[POOL ]" + _id + " is growing by "+newNumber);
+			
 			var i:uint = newNumber;
 			
 			  while ( --i > -1 ) 
@@ -181,6 +183,14 @@ package bridge.abstract
 			 while( --i > -1 ) 
                 _pool[i] = null;
 			_pool.length = 0;
+		}
+		
+		/**
+		 * 
+		 */
+		public function get poolSize():uint
+		{
+			return _pool.length;
 		}
 	}
 }

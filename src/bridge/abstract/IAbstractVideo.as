@@ -90,6 +90,8 @@ package bridge.abstract
 		 */
 		 function get loop():Boolean 
 		 function set loop(value:Boolean):void 
+		 
+		 function resizeVideo(width:int = 800, height:int = 600):void 
 	}
 	
 }
