@@ -123,7 +123,7 @@ package bridge.abstract
 		 * @return IAbstractTextField
 		 * @see bridge.abstract.IAbstractTextField
 		 */
-		function requestTextField(width:int, height:int, text:String, fontName:String="Verdana", fontSize:Number=12, color:uint=0, bold:Boolean=false):IAbstractTextField
+		function requestTextField(width:int, height:int, text:String, fontName:String="Verdana", fontSize:Number=12, color:uint=0, bold:Boolean=false,  nativeFiltersArr:Array = null):IAbstractTextField
 		
 		/**
 		 * 

@@ -274,6 +274,9 @@ package bridge.abstract.ui
 		
 		function updateCustomLabel(labelText:String):void
 		
+		function get defaultLabelProperties () : Object
+	
+		function set defaultLabelProperties (value:Object) : void
 	}
 
 }
