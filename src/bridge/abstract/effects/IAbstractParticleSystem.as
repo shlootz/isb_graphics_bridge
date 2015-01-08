@@ -18,6 +18,13 @@ package bridge.abstract.effects
 		
 		/**
 		 * 
+		 * @param	newConfigXML
+		 * @param	atlasXML
+		 */
+		function updateConfigXML(newConfigXML:XML, atlasXML:XML = null):void
+		
+		/**
+		 * 
 		 * @return
 		 */
 		function get emissionRate():Number
@@ -395,6 +402,28 @@ package bridge.abstract.effects
 		function get tangentialAccelerationVariance():Number
 		
 		function set tangentialAccelerationVariance(val:Number):void
+		
+		/**
+		 * red:Number=0, green:Number=0, blue:Number=0, alpha:Number=0
+		 * @return
+		 */
+		function get startColor():Object
+		
+		/**
+		 * red:Number=0, green:Number=0, blue:Number=0, alpha:Number=0
+		 */
+		function set startColor(val:Object):void
+		
+		/**
+		 * red:Number=0, green:Number=0, blue:Number=0, alpha:Number=0
+		 * @return
+		 */
+		function get endColor():Object
+		
+		/**
+		 * red:Number=0, green:Number=0, blue:Number=0, alpha:Number=0
+		 */
+		function set endColor(val:Object):void
 		
 	}
 	
