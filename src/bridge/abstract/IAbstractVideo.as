@@ -1,5 +1,6 @@
 package bridge.abstract 
 {
+	import flash.media.Video;
 	import flash.net.NetStream;
 	
 	/**
