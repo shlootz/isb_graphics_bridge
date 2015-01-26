@@ -258,8 +258,8 @@ package bridge
 		 */
 		function requestImage(name:String, scaleFromAtlas:Boolean = false):IAbstractImage
 		
-		/**
-		 * 
+		/** Adds and blends a color on an IAbstractImage 
+		 *  Please note that IAbstractMovieClip extends IAbstractImage, colorize works for any inherit of IAbstractImage
 		 * @param	image
 		 * @param	color
 		 */

@@ -372,8 +372,8 @@ package bridge
 			return autoScale;
 		}
 		
-		/**
-		 * 
+		/** Adds and blends a color on an IAbstractImage 
+		 *  Please note that IAbstractMovieClip extends IAbstractImage, colorize works for any extension of IAbstractImage
 		 * @param	image
 		 * @param	color
 		 */

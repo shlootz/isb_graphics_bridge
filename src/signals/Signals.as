@@ -57,6 +57,7 @@ package signals
 		
 		//FLV
 		public static const FLV_MOVIE_ENDED:String = "GEFLVMovieEnded";
+		public static const FLV_MOVIE_STARTED:String = "GEFLVMovieStarted";
 	}
 
 }
