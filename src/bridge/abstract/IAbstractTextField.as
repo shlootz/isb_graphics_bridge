@@ -19,6 +19,12 @@ package bridge.abstract
 		function set autoScale (value:Boolean) : void;
 
 		/**
+		 * 
+		 */
+		function get name () : String;
+		function set name (value:String) : void;
+		
+		/**
 		 * Specifies the type of auto-sizing the TextField will do.
 		 * Note that any auto-sizing will make auto-scaling useless. Furthermore, it has 
 		 * implications on alignment: horizontally auto-sized text will always be left-, 
