@@ -11,6 +11,7 @@ package bridge.abstract
 	import bridge.abstract.ui.IAbstractSlider;
 	import bridge.abstract.ui.IAbstractToggle;
 	import flash.display.Sprite;
+	import flash.display3D.Context3D;
 	import flash.events.Event;
 	import bridge.abstract.transitions.IAbstractLayerTransitionIn;
 	import bridge.abstract.transitions.IAbstractLayerTransitionOut;
@@ -52,6 +53,12 @@ package bridge.abstract
 		 * Inits the default signals for outter communication
 		 */
 		function initSignals():void
+		
+		/**
+		 * 
+		 */
+		function get is3D():Boolean 
+		function set is3D(value:Boolean):void 
 		
 		/**
 		 * 
@@ -177,7 +184,7 @@ package bridge.abstract
 		 * Initializes the engine.
 		 * <b>Without propor init, the graphics will not be displayed</b>
 		 */
-		function initEngine():void
+		function initEngine(sharedContext:Context3D = null):void
 		
 		/**
 		 * 
