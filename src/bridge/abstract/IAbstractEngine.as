@@ -469,7 +469,13 @@ package bridge.abstract
 		  * @param	atlasXML
 		  * @return
 		  */
-		 function requestAdvancedParticleSystem(configXML:XML, imageSource:IAbstractImage, atlasXML:XML=null):IAbstractParticleSystem
+		 function requestAdvancedParticleSystem(configXML:XML, imageSource:IAbstractImage, atlasXML:XML = null):IAbstractParticleSystem
+		 
+		 /**
+		  * 
+		  * @return
+		  */
+		 function  contextStatus():Boolean
 		
 	}
 	

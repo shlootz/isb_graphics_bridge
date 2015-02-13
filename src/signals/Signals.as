@@ -10,8 +10,12 @@ package signals
 	 */
 	public class Signals 
 	{
+		//Context signals
+		public static const CONTEXT_3D_RESTORED:String = "GEContext3DRestored";
+		
 		//General signals
 		public static const CHANGE_GRAPHICS_STATE:String = "GEchangeGraphicsState"
+		public static const REMOVE_AND_DISPOSE:String = "GERemoveAndDispose"
 		
 		//Layer tranzition in complete
 		public static const LAYER_TRANSITION_IN_COMPLETE:String = "GElayerTransitionInComplete"

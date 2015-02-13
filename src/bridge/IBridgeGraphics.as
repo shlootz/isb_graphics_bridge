@@ -651,6 +651,12 @@ package bridge
 		 * 
 		 */
 		function cleanUp():void
+		
+		/**
+		 * 
+		 * @return
+		 */
+		function  contextStatus():Boolean
 	}
 	
 }

@@ -985,6 +985,15 @@ package bridge
 	{
 		return (_graphicsEngine as IEngine).requestAdvancedParticleSystem(configXML, imageSource, atlasXML);
 	}
+	
+		/**
+	 * 
+	 * @return
+	 */
+	public function  contextStatus():Boolean
+	{
+		return (_graphicsEngine as IEngine).contextStatus();
+	}
 	}
 
 }
