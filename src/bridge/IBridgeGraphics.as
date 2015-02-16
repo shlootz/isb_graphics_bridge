@@ -233,6 +233,11 @@ package bridge
 		 */
 		function set space(val:Object):void
 		
+		/**
+		 * Returns a Flare scene3D object(Eg. bridgeGraphics.scene3D as scene3D)
+		 */
+		function get scene3D():Object 
+		
 		/** 
 		 * Retrieves a new texture from stored Atlas
 		 * @param	name

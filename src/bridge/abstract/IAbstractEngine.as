@@ -61,6 +61,11 @@ package bridge.abstract
 		function set is3D(value:Boolean):void 
 		
 		/**
+		 * Returns a Flare scene3D object(Eg. bridgeGraphics.scene3D as scene3D)
+		 */
+		function get scene3D():Object 
+		
+		/**
 		 * 
 		 * @param	name
 		 * @return

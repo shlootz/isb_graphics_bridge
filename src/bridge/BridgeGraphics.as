@@ -986,7 +986,14 @@ package bridge
 		return (_graphicsEngine as IEngine).requestAdvancedParticleSystem(configXML, imageSource, atlasXML);
 	}
 	
-		/**
+	/**
+	 * Returns a Flare scene3D object(Eg. bridgeGraphics.scene3D as scene3D)
+	 */
+	public function get scene3D():Object 
+	{
+		return (_graphicsEngine as IEngine).scene3D;
+	}
+	/**
 	 * 
 	 * @return
 	 */
