@@ -598,6 +598,13 @@ package bridge
 		function storeObject(name:String, object:Object):void
 		
 		/**
+		 * 
+		 * @param	name
+		 * @return
+		 */
+		function retrieveObject(name:String):Object
+		
+		/**
 		 * Saves a new sound in Assets Manager
 		 * @param	name
 		 * @param	sound

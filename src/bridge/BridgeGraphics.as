@@ -869,6 +869,16 @@ package bridge
 		/**
 		 * 
 		 * @param	name
+		 * @return
+		 */
+		public function retrieveObject(name:String):Object
+		{
+			return _assetsManager.getObject(name);
+		}
+		
+		/**
+		 * 
+		 * @param	name
 		 * @param	sound
 		 */
 		public function storeSound(name:String, sound:Sound):void
