@@ -46,7 +46,7 @@ package bridge.abstract
 		 * 
 		 * @param	path
 		 */
-		function addVideoPath(path:String):void
+		function addVideoPath(path:String, preBuffer:Boolean = true):void
 		
 		/**
 		 * 
@@ -93,6 +93,8 @@ package bridge.abstract
 		 function set loop(value:Boolean):void 
 		 
 		 function resizeVideo(width:int = 800, height:int = 600):void 
+		 
+		 function get bufferComplete():Boolean 
 	}
 	
 }

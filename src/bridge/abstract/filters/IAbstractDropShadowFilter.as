@@ -5,7 +5,7 @@ package bridge.abstract.filters
 	 * ...
 	 * @author Alex Popescu
 	 */
-	public interface IAbstractDropShadowFilter 
+	public interface IAbstractDropShadowFilter  extends IAbstractReferencedFilter
 	{
 		function set distance(val:Number):void
 		

@@ -5,7 +5,7 @@ package bridge.abstract.filters
 	 * ...
 	 * @author Alex Popescu
 	 */
-	public interface IAbstractBlurFilter 
+	public interface IAbstractBlurFilter extends IAbstractReferencedFilter
 	{
 		function set blurX(val:Number):void
 		

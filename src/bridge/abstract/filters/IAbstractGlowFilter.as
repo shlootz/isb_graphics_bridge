@@ -5,7 +5,7 @@ package bridge.abstract.filters
 	 * ...
 	 * @author Alex Popescu
 	 */
-	public interface IAbstractGlowFilter 
+	public interface IAbstractGlowFilter  extends IAbstractReferencedFilter
 	{
 		function set color(val:uint):void
 		
