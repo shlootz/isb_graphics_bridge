@@ -275,6 +275,12 @@ package bridge
 		 * @param	color
 		 */
 		 function colorizeImage(image:IAbstractImage, color:uint):void
+		 
+		 /**
+		  * 
+		  */
+		 function get alwaysVerbose():Boolean 
+		 function set alwaysVerbose(value:Boolean):void 
 		
 		/**
 		 * 

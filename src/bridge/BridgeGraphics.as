@@ -111,6 +111,7 @@ package bridge
 	  */
 	public class BridgeGraphics implements IBridgeGraphics
 	{
+		public static var isVerbose:Boolean = false;
 		
 		public static const GRAPHICS_ENGINE:String = getQualifiedClassName+"graphicsEngine";
 		public static const ASSETS_MANAGER:String = getQualifiedClassName+"assetsManager";
@@ -181,6 +182,8 @@ package bridge
 			_juggler = new juggler();
 			_space = new space();
 			_alwaysVerbose = alwaysVerbose;
+			
+			BridgeGraphics.isVerbose = _alwaysVerbose;
 		}
 		
 		public function returnToPool(obj:Object):void
@@ -344,7 +347,7 @@ package bridge
 			}
 			else
 			{
-				trace("WARNING :: BridgeGraphics :: requestImage :: name: " + name+" cannot be found -> fallback to transparent bitmapData");
+				if(BridgeGraphics.isVerbose) trace("WARNING :: BridgeGraphics :: requestImage :: name: " + name+" cannot be found -> fallback to transparent bitmapData");
 				img = (_graphicsEngine as IEngine).requestImageFromBitmapData(_bitmapDataFallBack);
 				img.name = "imgFallback" + Math.random() * 999999;
 			}
@@ -1016,6 +1019,17 @@ package bridge
 	public function get scene3D():Object 
 	{
 		return (_graphicsEngine as IEngine).scene3D;
+	}
+	
+	public function get alwaysVerbose():Boolean 
+	{
+		return _alwaysVerbose;
+	}
+	
+	public function set alwaysVerbose(value:Boolean):void 
+	{
+		_alwaysVerbose = value;
+		BridgeGraphics.isVerbose  = _alwaysVerbose;
 	}
 	/**
 	 * 

@@ -1,5 +1,6 @@
 package bridge.abstract 
 {
+	import bridge.BridgeGraphics;
 	import flash.utils.getDefinitionByName;
 	import flash.utils.getQualifiedClassName;
 	
@@ -93,7 +94,7 @@ package bridge.abstract
 		 */
 		public function growPool(newNumber:uint):void
 		{
-			trace("[POOL ]" + _id + " is growing by "+newNumber);
+			if(BridgeGraphics.isVerbose) trace("[POOL ]" + _id + " is growing by "+newNumber);
 			
 			var i:uint = newNumber;
 			
