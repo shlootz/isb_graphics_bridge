@@ -1,5 +1,6 @@
 package bridge 
 {
+	import bridge.abstract.console.IConsoleCommands;
 	import bridge.abstract.effects.IAbstractParticleSystem;
 	import bridge.abstract.IAbstractDisplayObjectContainer;
 	import bridge.abstract.IAbstractEngineLayerVO;
@@ -237,6 +238,11 @@ package bridge
 		 * Returns a Flare scene3D object(Eg. bridgeGraphics.scene3D as scene3D)
 		 */
 		function get scene3D():Object 
+		
+		/**
+		 * Returns an IConsoleCommands
+		 */
+		function get consoleCommands():IConsoleCommands 
 		
 		/** 
 		 * Retrieves a new texture from stored Atlas

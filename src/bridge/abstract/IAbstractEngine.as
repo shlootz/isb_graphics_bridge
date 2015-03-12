@@ -1,5 +1,6 @@
 package bridge.abstract 
 {
+	import bridge.abstract.console.IConsoleCommands;
 	import bridge.abstract.effects.IAbstractParticleSystem;
 	import bridge.abstract.filters.IAbstractBlurFilter;
 	import bridge.abstract.filters.IAbstractDropShadowFilter;
@@ -57,6 +58,11 @@ package bridge.abstract
 		/**
 		 * 
 		 */
+		function set alwaysVerbose(val:Boolean):void
+		
+		/**
+		 * 
+		 */
 		function get is3D():Boolean 
 		function set is3D(value:Boolean):void 
 		
@@ -64,6 +70,11 @@ package bridge.abstract
 		 * Returns a Flare scene3D object(Eg. bridgeGraphics.scene3D as scene3D)
 		 */
 		function get scene3D():Object 
+		
+		/**
+		 * Returns a IConsoleCommands
+		 */
+		function get consoleCommands():IConsoleCommands 
 		
 		/**
 		 * 

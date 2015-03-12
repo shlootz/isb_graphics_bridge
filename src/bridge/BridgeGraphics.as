@@ -1,5 +1,6 @@
 package bridge 
 {
+	import bridge.abstract.console.IConsoleCommands;
 	import bridge.abstract.effects.IAbstractParticleSystem;
 	import bridge.abstract.filters.IAbstractBlurFilter;
 	import bridge.abstract.filters.IAbstractDropShadowFilter;
@@ -135,6 +136,8 @@ package bridge
 		
 		private var _bitmapDataFallBack:BitmapData = new BitmapData(50, 50, true, 0x000000);
 		
+		private var _alwaysVerbose:Boolean = false;
+		
 		/** Creates a new BridgeGraphics instance
 		 * 
 		 * @param	graphicsEngineClass		Entry Point of the actual graphics engine.
@@ -157,7 +160,8 @@ package bridge
 										poolClass:Class,
 										juggler:Class = null,
 										space:Class = null,
-										debugMode:Boolean = false
+										debugMode:Boolean = false,
+										alwaysVerbose:Boolean = false
 									    ) 
 		{
 			_injectedClasses[GRAPHICS_ENGINE] = graphicsEngineClass;
@@ -168,6 +172,7 @@ package bridge
 			_injectedClasses[SPACE] = space;
 			
 			_graphicsEngine = new graphicsEngineClass(graphicsEngineInited, canvasSize.x, canvasSize.y, "FULLSCREEN", debugMode) as IEngine;
+			(_graphicsEngine as IEngine).alwaysVerbose = alwaysVerbose;
 			_assetsManager = new assetsManagerClass();
 			_signalsManager = new signalsManagerClass();
 			(_graphicsEngine as IEngine).injectAssetsManager(_assetsManager);
@@ -175,6 +180,7 @@ package bridge
 			_poolClass = poolClass;
 			_juggler = new juggler();
 			_space = new space();
+			_alwaysVerbose = alwaysVerbose;
 		}
 		
 		public function returnToPool(obj:Object):void
@@ -296,6 +302,14 @@ package bridge
 		public function set space(val:Object):void
 		{
 			_space = space;
+		}
+		
+		/**
+		 * IConsoleCommands
+		 */
+		public 	function get consoleCommands():IConsoleCommands 
+		{
+			return (_graphicsEngine as IEngine).consoleCommands;
 		}
 		
 		/** Retrieves a new texture from stored Atlas
