@@ -226,13 +226,13 @@ package bridge
 		 * 
 		 * @TODO Build an interface for the space
 		 */
-		function get space():Object
+		//function get space():Object
 		
 		/** Sets a custom physics space
 		 * 
 		 * @TODO Build an interface for the space
 		 */
-		function set space(val:Object):void
+		//function set space(val:Object):void
 		
 		/**
 		 * Returns a Flare scene3D object(Eg. bridgeGraphics.scene3D as scene3D)

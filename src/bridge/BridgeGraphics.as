@@ -118,7 +118,7 @@ package bridge
 		public static const SIGNALS_MANAGER:String = getQualifiedClassName+"signalsManager";
 		public static const POOL:String = getQualifiedClassName+"pool";
 		public static const JUGGLER:String = getQualifiedClassName+"juggler";
-		public static const SPACE:String = getQualifiedClassName+"space";
+		//public static const SPACE:String = getQualifiedClassName+"space";
 			
 		public var display:Object;
 		
@@ -131,7 +131,7 @@ package bridge
 		private var _signalsManager:Object;
 		private var _poolClass:Class;
 		private var _juggler:Object;
-		private var _space:Object;
+		//private var _space:Object;
 		
 		private var _pools:Dictionary = new Dictionary(true);
 		
@@ -160,7 +160,7 @@ package bridge
 										signalsManagerClass:Class, 
 										poolClass:Class,
 										juggler:Class = null,
-										space:Class = null,
+										//space:Class = null,
 										debugMode:Boolean = false,
 										alwaysVerbose:Boolean = false
 									    ) 
@@ -170,7 +170,7 @@ package bridge
 			_injectedClasses[SIGNALS_MANAGER] = signalsManagerClass;
 			_injectedClasses[POOL] = poolClass;
 			_injectedClasses[JUGGLER] = juggler;
-			_injectedClasses[SPACE] = space;
+			//_injectedClasses[SPACE] = space;
 			
 			_graphicsEngine = new graphicsEngineClass(graphicsEngineInited, canvasSize.x, canvasSize.y, "FULLSCREEN", debugMode) as IEngine;
 			(_graphicsEngine as IEngine).alwaysVerbose = alwaysVerbose;
@@ -180,7 +180,7 @@ package bridge
 			(_graphicsEngine as IEngine).injectSignalsHub(_signalsManager);
 			_poolClass = poolClass;
 			_juggler = new juggler();
-			_space = new space();
+			//_space = new space();
 			_alwaysVerbose = alwaysVerbose;
 			
 			BridgeGraphics.isVerbose = _alwaysVerbose;
@@ -203,10 +203,10 @@ package bridge
 				(_graphicsEngine as IEngine).addJuggler(_juggler)
 			}
 			
-			if (space != null)
-			{
-				
-			}
+			//if (space != null)
+			//{
+				//
+			//}
 		}
 		
 		/**
@@ -284,10 +284,10 @@ package bridge
 		 * 
 		 * @TODO Build an interface for the space
 		 */
-		public function get space():Object
-		{
-			return _space;
-		}
+		//public function get space():Object
+		//{
+			//return _space;
+		//}
 		
 		/** Set a custom juggler.
 		 * @param	val a generic object as juggler
@@ -302,10 +302,10 @@ package bridge
 		 * @param	val a generic object as space
 		 * @TODO Build an interface for the space
 		 */
-		public function set space(val:Object):void
-		{
-			_space = space;
-		}
+		//public function set space(val:Object):void
+		//{
+			//_space = space;
+		//}
 		
 		/**
 		 * IConsoleCommands
@@ -984,7 +984,7 @@ package bridge
 			defaultJuggler.purge();
 			_juggler = null;
 			
-			_space = null;
+			//_space = null;
 		
 			(_graphicsEngine as IEngine).cleanUp();
 			_graphicsEngine = null;
