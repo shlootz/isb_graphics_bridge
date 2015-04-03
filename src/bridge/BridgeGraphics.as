@@ -735,6 +735,16 @@ package bridge
 			_graphicsEngine.engineStage.addChild(child);
 		}
 		
+		/**
+		 * 
+		 * @param	target
+		 * @param	filter
+		 */
+		public function addFragmentFilter(target:IAbstractDisplayObject, filter:Object):void
+		{
+			_graphicsEngine.addFragmentFilter(target, filter);
+		}
+		
 		 /**
 		  * 
 		  * @param	target

@@ -549,6 +549,12 @@ package bridge
 		/**
 		 * 
 		 * @param	target
+		 * @param	filter
+		 */
+		function addFragmentFilter(target:IAbstractDisplayObject, filter:Object):void
+		/**
+		 * 
+		 * @param	target
 		 * @param	vo
 		 */
 		function addBlurFilter (target:IAbstractDisplayObject, vo:IAbstractBlurFilter) : void;

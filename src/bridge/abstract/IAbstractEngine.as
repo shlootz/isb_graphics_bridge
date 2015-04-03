@@ -387,6 +387,12 @@ package bridge.abstract
 		/**
 		 * 
 		 * @param	target
+		 * @param	filter
+		 */
+		function addFragmentFilter(target:IAbstractDisplayObject, filter:Object):void
+		/**
+		 * 
+		 * @param	target
 		 * @param	vo
 		 */
 		function addDropShadowFilter(target:IAbstractDisplayObject, vo:IAbstractDropShadowFilter):void
