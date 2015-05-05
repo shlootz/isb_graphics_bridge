@@ -962,6 +962,18 @@ package bridge
 			_graphicsEngine.addTextureAtlas(name, atlasXml, atlasPng);
 		}
 		
+		/**
+		 * 
+		 * @param	name
+		 * @param	atlasXml
+		 * @param	atlasATF
+		 */
+		public function storeAtlasATF(name:String, atlasXml:XML, atlasATF:ByteArray):void
+		{
+			_assetsManager.addXml(name, atlasXml);
+			_graphicsEngine.addATFAtlasByteArray(name, atlasXml, atlasATF);
+		}
+		
 		public function get nativeDisplay():Sprite
 		{
 			return _graphicsEngine.nativeDisplay;

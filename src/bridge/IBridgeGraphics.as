@@ -652,6 +652,14 @@ package bridge
 		
 		/**
 		 * 
+		 * @param	name
+		 * @param	atlasXml
+		 * @param	atlasATF
+		 */
+		function storeAtlasATF(name:String, atlasXml:XML, atlasATF:ByteArray):void
+		
+		/**
+		 * 
 		 */
 		function get nativeDisplay():Sprite
 		

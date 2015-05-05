@@ -21,6 +21,7 @@ package bridge.abstract
 	import bridge.abstract.ui.IAbstractLabel;
 	import flash.geom.Point;
 	import flash.geom.Rectangle;
+	import flash.utils.ByteArray;
 	import flash.utils.Dictionary
 	import flash.display.BitmapData;
 	import flash.display.Bitmap;
@@ -467,6 +468,14 @@ package bridge.abstract
 		 * @param	atlasPng
 		 */
 		function addTextureAtlas(name:String, atlasXml:XML, atlasPng:Class):void
+		
+		/**
+		 * 
+		 * @param	name
+		 * @param	atlasXml
+		 * @param	ATFByteArray
+		 */
+		function addATFAtlasByteArray(name:String, atlasXml:XML, ATFByteArray:ByteArray):void
 		
 		/**
 		 * 
