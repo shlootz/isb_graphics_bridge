@@ -13,7 +13,7 @@ package bridge.abstract.ui
 	 */
 	public interface IAbstractLabel extends IAbstractSprite
 	{
-		 function updateLabel(text:String):void
+		 function updateLabel(text:String, autoFit:Boolean = true):void
 		 
 		 function get textField():IAbstractTextField
 	}
