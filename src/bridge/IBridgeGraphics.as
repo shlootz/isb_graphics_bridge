@@ -690,6 +690,16 @@ package bridge
 		 */
 		function cleanUp():void
 		
+		 /**
+		  * 
+		  */
+		 function pauseRender():void
+		 
+		 /**
+		  * 
+		  */
+		 function resumeRender():void
+		
 		/**
 		 * 
 		 * @return

@@ -504,6 +504,16 @@ package bridge.abstract
 		 
 		 /**
 		  * 
+		  */
+		 function pauseRender():void
+		 
+		 /**
+		  * 
+		  */
+		 function resumeRender():void
+		 
+		 /**
+		  * 
 		  * @return
 		  */
 		 function  contextStatus():Boolean

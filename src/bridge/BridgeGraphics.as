@@ -1053,6 +1053,23 @@ package bridge
 		_alwaysVerbose = value;
 		BridgeGraphics.isVerbose  = _alwaysVerbose;
 	}
+	
+	 /**
+	 * 
+	 */
+	public function pauseRender():void
+	 {
+		 (_graphicsEngine as IEngine).pauseRender();
+	 }	 
+	 
+	/**
+	 * 
+	 */
+	 public function resumeRender():void
+	{
+		 (_graphicsEngine as IEngine).resumeRender();
+	}
+	
 	/**
 	 * 
 	 * @return
