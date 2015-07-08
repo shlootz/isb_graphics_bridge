@@ -55,7 +55,7 @@ package bridge.abstract
 		 * Thus, don't just blindly flatten all your sprites, but reserve flattening for sprites
 		 * with a big number of children.
 		 */
-		function flatten () : void;
+		function flatten (ignoreChildOrder:Boolean = false) : void;
 		
 		/**
 		 * Removes the rendering optimizations that were created when flattening the sprite.
