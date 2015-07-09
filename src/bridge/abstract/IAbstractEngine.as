@@ -123,7 +123,7 @@ package bridge.abstract
 		 * @param	vec
 		 * @param	atlasName
 		 */
-		function batchBitmapData(vec:Vector.<BitmapData>, atlasName:String):void
+		function batchBitmapData(vec:Vector.<BitmapData>,  names:Vector.<String>, atlasName:String):void
 		
 		/**
 		 * 

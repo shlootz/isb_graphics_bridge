@@ -306,7 +306,7 @@ package bridge
 		 * @param	vec
 		 * @param	atlasName
 		 */
-		function batchBitmapData(vec:Vector.<BitmapData>, atlasName:String):void
+		function batchBitmapData(vec:Vector.<BitmapData>,  names:Vector.<String>, atlasName:String):void
 		
 		/** Uses a prefix to build an animation from images in an atlas.
 		 * 

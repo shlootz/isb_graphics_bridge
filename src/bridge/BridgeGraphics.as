@@ -445,9 +445,9 @@ package bridge
 		 * @param	bitmapData
 		 * @return
 		 */
-		public function batchBitmapData(vec:Vector.<BitmapData>, atlasName:String):void
+		public function batchBitmapData(vec:Vector.<BitmapData>,  names:Vector.<String>, atlasName:String):void
 		{
-			(_graphicsEngine as IEngine).batchBitmapData(vec, atlasName);
+			(_graphicsEngine as IEngine).batchBitmapData(vec, names, atlasName);
 		}
 		
 		/** Uses a prefix to build an animation from images in an atlas.
