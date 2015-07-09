@@ -301,6 +301,13 @@ package bridge
 		 */
 		function requestImageFromBitmapData(bitmapData:BitmapData):IAbstractImage
 		
+		/**
+		 * 
+		 * @param	vec
+		 * @param	atlasName
+		 */
+		function batchBitmapData(vec:Vector.<BitmapData>, atlasName:String):void
+		
 		/** Uses a prefix to build an animation from images in an atlas.
 		 * 
 		 * @param	prefix - retrieves all the images from an atlas using this prefix

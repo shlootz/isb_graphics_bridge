@@ -440,6 +440,16 @@ package bridge
 			return(_graphicsEngine as IEngine).requestImageFromBitmapData(bitmapData) as IAbstractImage;
 		}
 		
+		/**
+		 * 
+		 * @param	bitmapData
+		 * @return
+		 */
+		public function batchBitmapData(vec:Vector.<BitmapData>, atlasName:String):void
+		{
+			(_graphicsEngine as IEngine).batchBitmapData(vec, atlasName);
+		}
+		
 		/** Uses a prefix to build an animation from images in an atlas.
 		 * 
 		 * @param	prefix - retrieves all the images from an atlas using this prefix
@@ -450,36 +460,36 @@ package bridge
 		public function requestMovie(prefix:String, fps:uint = 24, scaleFromAtlas:Boolean = false):IAbstractMovie
 		{
 			var mc:IAbstractMovie = (_graphicsEngine as IEngine).requestMovie(prefix, fps) as IAbstractMovie;
-			if (mc)
-			{
-				var autoScale:Number = 1;
-				var results:Vector.<Number> = new Vector.<Number>;
-				
-				if (scaleFromAtlas)
-				{
-					results.push(searchScale(prefix + "-" + "0"));
-					results.push(searchScale(prefix + "-" + "1"));
-					results.push(searchScale(prefix + "_" + "0"));
-					results.push(searchScale(prefix + "_" + "1"));
-					results.push(searchScale(prefix + "" + "0"));
-					results.push(searchScale(prefix + "" + "1"));
-					results.push(searchScale(prefix + "" + "00"));
-					results.push(searchScale(prefix + "" + "01"));
-					results.push(searchScale(prefix + "_" + "00"));
-					results.push(searchScale(prefix + "_" + "01"));
-					
-					for (var i:uint = 0; i < results.length; i++ )
-					{
-						if (results[i] != 1)
-						{
-							autoScale = results[i];
-							break;
-						}
-					}
-				}
-				
-				mc.scaleX = mc.scaleY = autoScale;
-			}
+			//if (mc)
+			//{
+				//var autoScale:Number = 1;
+				//var results:Vector.<Number> = new Vector.<Number>;
+				//
+				//if (scaleFromAtlas)
+				//{
+					//results.push(searchScale(prefix + "-" + "0"));
+					//results.push(searchScale(prefix + "-" + "1"));
+					//results.push(searchScale(prefix + "_" + "0"));
+					//results.push(searchScale(prefix + "_" + "1"));
+					//results.push(searchScale(prefix + "" + "0"));
+					//results.push(searchScale(prefix + "" + "1"));
+					//results.push(searchScale(prefix + "" + "00"));
+					//results.push(searchScale(prefix + "" + "01"));
+					//results.push(searchScale(prefix + "_" + "00"));
+					//results.push(searchScale(prefix + "_" + "01"));
+					//
+					//for (var i:uint = 0; i < results.length; i++ )
+					//{
+						//if (results[i] != 1)
+						//{
+							//autoScale = results[i];
+							//break;
+						//}
+					//}
+				//}
+				//
+				//mc.scaleX = mc.scaleY = autoScale;
+			//}
 			return mc;
 		}
 		

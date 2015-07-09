@@ -120,6 +120,13 @@ package bridge.abstract
 		
 		/**
 		 * 
+		 * @param	vec
+		 * @param	atlasName
+		 */
+		function batchBitmapData(vec:Vector.<BitmapData>, atlasName:String):void
+		
+		/**
+		 * 
 		 * @param	prefix
 		 * @param	fps
 		 * @return 	a movie clip
