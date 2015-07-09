@@ -363,7 +363,7 @@ package bridge
 		private function searchScale(id:String):Number
 		{
 			var autoScale:Number = 1;
-			var elementsList:XML;
+			/*var elementsList:XML;
 			var xl:XMLList ;
 			
 			var spriteSheetsNames:Vector.<String> = _assetsManager.getXmlNames();
@@ -384,6 +384,22 @@ package bridge
 			if (autoScale == 0)
 			{
 				autoScale = 1;
+			}*/
+			
+			if (id.indexOf("x@0.5") >= 0)
+			{
+				autoScale = .5;
+			}
+			else {
+				if (id.indexOf("x@1.5") >= 0) {
+						autoScale = 1.5;
+				}
+				else
+				{
+					if (id.indexOf("x@2") >= 0) {
+						autoScale = 2;
+					}
+				}
 			}
 			
 			return autoScale;
