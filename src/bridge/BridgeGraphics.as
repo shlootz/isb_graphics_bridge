@@ -442,6 +442,21 @@ package bridge
 		
 		/**
 		 * 
+		 * @param	characters
+		 * @param	font
+		 * @param	fontSize
+		 * @param	bold
+		 * @param	italic
+		 * @param	charMarginX
+		 * @param	fontCustomID
+		 */
+		public function batchFont(characters:String = "", font:String = "Verdana", fontSize:uint = 12, bold:Boolean = false, italic:Boolean = false, charMarginX:int = 0, fontCustomID:String = ""):void
+		 {
+			 (_graphicsEngine as IEngine).batchFont(characters, font, fontSize, bold, italic, charMarginX, fontCustomID);
+		 }
+		
+		/**
+		 * 
 		 * @param	bitmapData
 		 * @return
 		 */

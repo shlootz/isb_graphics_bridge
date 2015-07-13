@@ -308,6 +308,18 @@ package bridge
 		 */
 		function batchBitmapData(vec:Vector.<BitmapData>,  names:Vector.<String>, atlasName:String):void
 		
+		/**
+		 * 
+		 * @param	characters
+		 * @param	font
+		 * @param	fontSize
+		 * @param	bold
+		 * @param	italic
+		 * @param	charMarginX
+		 * @param	fontCustomID
+		 */
+		function batchFont(characters:String = "", font:String = "Verdana", fontSize:uint = 12, bold:Boolean = false, italic:Boolean = false, charMarginX:int = 0, fontCustomID:String = ""):void
+		
 		/** Uses a prefix to build an animation from images in an atlas.
 		 * 
 		 * @param	prefix - retrieves all the images from an atlas using this prefix
