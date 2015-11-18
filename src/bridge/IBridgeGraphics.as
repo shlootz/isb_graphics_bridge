@@ -688,12 +688,12 @@ package bridge
 		function get currentContainer():IAbstractState
 		
 		/**
-		 * 
+		 * DEPRECATED - MUST REMOVE AFTER VALIDATION
 		 * @param	configXML
 		 * @param	imageSource
 		 * @return
 		 */
-		 function requestParticleSystem(configXML:XML, imageSource:IAbstractImage):IAbstractParticleSystem
+		 //function requestParticleSystem(configXML:XML, imageSource:IAbstractImage):IAbstractParticleSystem
 		 
 		 /**
 		  * 
